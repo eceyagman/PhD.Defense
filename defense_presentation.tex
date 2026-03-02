@@ -85,14 +85,14 @@
 \newcommand{\hlcoef}[1]{\textcolor{HopBlue}{\textbf{#1}}}
 
 % AUTOMATIC SECTION DIVIDERS
-\AtBeginSection[]{
-  \begin{frame}[plain]
-    \vspace{2cm}
-    {\LARGE \textbf{\insertsectionhead}}
-    \vspace{0.2cm}
-    {\color{HopBlue}\rule{0.4\linewidth}{2pt}}
-  \end{frame}
-}
+% \AtBeginSection[]{
+%   \begin{frame}[plain]
+%     \vspace{2cm}
+%     {\LARGE \textbf{\insertsectionhead}}
+%     \vspace{0.2cm}
+%     {\color{HopBlue}\rule{0.4\linewidth}{2pt}}
+%   \end{frame}
+% }
 
 % LINKS
 \usepackage{hyperref}
@@ -127,6 +127,9 @@
 \newcommand{\MyNumtwo}[1]{\num[round-mode=places,round-precision=2]{#1}}
 \bibliographystyle{apacite}
 
+\usepackage{totcount}
+\regtotcounter{framenumber}
+
 % ============================================================
 % TITLE INFO
 % ============================================================
@@ -134,13 +137,11 @@
 Measurement, Gender Dynamics, and Social Identity}
 \author{Ece Yagman}
 \institute{Universitat Aut\`onoma de Barcelona \\ PhD Defense}
-\date{[Date]} %TODO: fill in defense date
+\date{April 7th, 2026} %TODO: fill in defense date
 
-\titlegraphic{\includegraphics[width=0.4\textwidth]{figures/Logo.png}}
-\newcommand{\grantack}{\tiny
-This study has received financial support from grant PID2020-117523GB-I00 funded by\\
-MICIU/AEI/10.13039/501100011033
-}
+\titlegraphic{\includegraphics[width=0.2\textwidth]{figures/Logo.png}}
+
+
 \addtobeamertemplate{title page}{}
 {%
   \vspace{-1.5em}
@@ -157,17 +158,18 @@ MICIU/AEI/10.13039/501100011033
 \begin{frame}[plain]
   \titlepage
 \end{frame}
+
 \addtocounter{framenumber}{-1}
 
 % Custom footline: page X / total
-\setbeamertemplate{footline}
-{
+\setbeamertemplate{footline}{
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.9\paperwidth,ht=2.5ex,dp=1ex,right]{page number in head/foot}%
-    \usebeamerfont{page number in head/foot}%
-    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
-  \end{beamercolorbox}}%
+    \begin{beamercolorbox}[wd=.9\paperwidth,ht=2.5ex,dp=1ex,right]{page number in head/foot}%
+      \usebeamerfont{page number in head/foot}%
+      \insertframenumber{} / \total{framenumber}\hspace*{2ex}
+    \end{beamercolorbox}%
+  }%
   \vskip0pt%
 }
 
@@ -175,7 +177,7 @@ MICIU/AEI/10.13039/501100011033
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % INTRODUCTION  (slides 2--9)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
+\section{Introduction} 
 
 % ---- Slide 2: The Big Picture ----
 \begin{frame}{The Big Picture}
@@ -205,7 +207,7 @@ MICIU/AEI/10.13039/501100011033
 \textbf{What happens when SEL is embedded into routine classroom instruction?}
 
 \vspace{0.2cm}
-The pedagogical program at the center of this thesis --- \emph{Pentabilities} --- maps broad socioemotional skills into 35 observable behaviors across five domains, and relies on repeated teacher, peer, and self assessments recorded through a digital platform to structure feedback and goal setting.
+The pedagogical program at the center of this thesis, \emph{Pentabilities}, maps broad socioemotional skills into 35 observable behaviors across five domains, and relies on repeated teacher, peer, and self assessments recorded through a digital platform to structure feedback and goal setting.
 
 \vspace{0.3cm}
 \textbf{Three chapters provide evidence on three questions:}
@@ -218,10 +220,10 @@ The pedagogical program at the center of this thesis --- \emph{Pentabilities} --
 
 
 % ---- Slide 4: Three Chapters ----
-\begin{frame}{Three Chapters, One Setting, Progressive Depth}
+\begin{frame}{Three chapters at a glance}
 \small
-\begin{center}
-\begin{tabular}{llll}
+\centering
+\begin{tabular}{p{0.8cm} p{4.2cm} p{1.2cm} p{2cm}}
 \toprule
 Chapter & Question & Sample & Focus \\
 \midrule
@@ -230,7 +232,7 @@ Chapter & Question & Sample & Focus \\
 3 & Can the program reduce in-group bias? & T + C & Gender + Nationality \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{frame}
 
 \vspace{0.5cm}
 %TODO: Insert thesis architecture funnel diagram
@@ -346,7 +348,7 @@ $\Rightarrow$ This multi-rater design lets us:
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CHAPTER 1: TREATMENT EFFECTS  (slides 10--14 + bridge 16)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Chapter 1: Treatment Effects}
+\section{Chapter 1}
 % NOTE: \AtBeginSection auto-generates the chapter divider slide
 
 % ---- Slide 11: Empirical Strategy ----
@@ -450,7 +452,7 @@ But the 360$^{\circ}$ measurement system reveals something else: when students e
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CHAPTER 2: GENDER GAPS  (slides 17--28 + bridge 29)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Chapter 2: Gender Gaps}
+\section{Chapter 2}
 
 % ---- Slide 18: Why Adolescence? ----
 \begin{frame}{Why Adolescence?}
@@ -764,7 +766,7 @@ The program in Chapter 1 was not designed as a debiasing intervention --- it tar
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CHAPTER 3: IN-GROUP FAVORITISM  (slides 30--39)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Chapter 3: In-Group Bias \& Treatment}
+\section{Chapter 3}
 
 % ---- Slide 31: Research Questions + Design ----
 \begin{frame}{Research Questions and Design}
