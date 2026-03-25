@@ -83,6 +83,10 @@
   \alt<#1->{#2}{\textcolor{fadegray}{#2}}%
 }
 \newcommand{\hlcoef}[1]{\textcolor{HopBlue}{\textbf{#1}}}
+\newcommand{\fademark}[1]{\alt<#1->{\itemmark}{\textcolor{fadegray}{\itemmark}}}
+\newcommand{\itemmark}{\scalebox{0.7}{$\blacktriangleright$}}  % Beamer default triangle
+
+
 
 % AUTOMATIC SECTION DIVIDERS
 % \AtBeginSection[]{
@@ -166,296 +170,456 @@ Measurement, Gender Dynamics, and Social Identity}
   \vskip0pt%
 }
 
-
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% INTRODUCTION  (slides 2--9)
+% INTRODUCTION  (slides 1--10, title page unnumbered)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction} 
+\section{Introduction}
 
-% ---- Slide 2: The Big Picture ----
-\begin{frame}{The Big Picture}
-\small
-\textbf{Socioemotional skills are central to human capital formation --- yet they remain elusive to define and measure}
-
+% ---- Slide 1: The big picture ----
+\begin{frame}{The big picture}
+\footnotesize
+\fadecolor{1}{\textbf{Skills beyond cognitive abilities matter}}
+\vspace{0.1cm}
 \begin{itemize}
-    \item Strong predictors of long-term outcomes: educational success, earnings, well-being \citep{Heckman2012-nt}
-    \item Distinct from personality traits: SES are malleable, context-dependent competencies that can be developed through instruction
-    \item No shared taxonomy --- overlapping labels and frameworks
-    \item Gap in \emph{repeated, classroom-embedded} measurement within school systems
+    \item[\fadecolor{1}{\textbullet}] \fadecolor{1}{\textbf{Socioemotional skills:} the umbrella term for maintaining relationships, regulating emotions, managing goals (e.g., perseverance, motivation, teamwork, self-control)}
+    \item[\fadecolor{1}{\textbullet}] \fadecolor{1}{Predict educational attainment, earnings, well-being, long-term success \citep{Heckman2012-nt}; malleable}
 \end{itemize}
-
-\vspace{0.3cm}
-\textbf{The challenge is especially acute in schools:}
+\vspace{0.1cm}
+\fadecolor{2}{\textbf{But, how do we measure them?}}
 \begin{itemize}
-    \item Education systems are increasingly expected to foster SES, not just academics
-    \item Daily classroom interactions shape their development
-    \item Yet educators lack behavioral anchors and consistent tools for tracking these skills
+    \item[\fadecolor{2}{\textbullet}] \fadecolor{2}{Lack of common language: 21st-century skills, soft skills, non-cognitive skills, etc.}
+    \item[\fadecolor{2}{\textbullet}] \fadecolor{2}{Lack of precision: 136 competency frameworks identified}
+    \item[\fadecolor{2}{\textbullet}] \fadecolor{2}{Assessment tools suffer from biases, reliability, and validity concerns}
+\end{itemize}
+\vspace{0.1cm}
+\fadecolor{3}{\textbf{The challenge is especially acute in schools:}}
+\begin{itemize}
+    \item[\fadecolor{3}{\textbullet}] \fadecolor{3}{Education systems are increasingly expected to foster socioemotional learning (SEL), not just academics}
+    \item[\fadecolor{3}{\textbullet}] \fadecolor{3}{Daily classroom interactions, instructional practices, teacher feedback and expectations shape their development}
+    \item[\fadecolor{3}{\textbullet}] \fadecolor{3}{Yet educators lack consistent tools for developing and tracking these skills}
 \end{itemize}
 \end{frame}
 
 
-% ---- Slide 3: This Thesis ----
-\begin{frame}{This Thesis}
-\small
-\textbf{What happens when SEL is embedded into routine classroom instruction?}
-
-\vspace{0.2cm}
-The pedagogical program at the center of this thesis, \emph{Pentabilities}, maps broad socioemotional skills into 35 observable behaviors across five domains, and relies on repeated teacher, peer, and self assessments recorded through a digital platform to structure feedback and goal setting.
-
+% ---- Slide 2: This thesis (preview) ----
+\begin{frame}{This thesis - a preview}
+\footnotesize
 \vspace{0.3cm}
-\textbf{Three chapters provide evidence on three questions:}
+\textcolor{HopBlue}{\textbf{$\Rightarrow$ What happens when SEL is embedded into routine classroom instruction?}} \\
+\vspace{0.2cm}
+\fadecolor{1}{\textbf{Pedagogical Program}}
+\begin{itemize}
+    \item[\fademark{1}] \fadecolor{1}{Equip teachers with tools to systematically observe students' socio-emotional skills and provide structured, behavior-focused feedback}
+\end{itemize}
+\vspace{0.2cm}
+\fadecolor{2}{\textbf{Design}}
+\begin{itemize}
+    \item[\fademark{2}] \fadecolor{2}{Clustered RCT in 40 secondary schools in Catalonia}
+\end{itemize}
+\vspace{0.2cm}
+\fadecolor{3}{\textbf{Multi-method measurement}}
+\begin{itemize}
+    \item[\fademark{3}] \fadecolor{3}{Classroom observations of student behavior with 360$^{\circ}$ ratings, standardized behavioral task, survey measures, administrative records}
+\end{itemize}
+\vspace{0.2cm}
+\fadecolor{4}{\textbf{Three chapters}}
 \begin{enumerate}
-    \item \textbf{Causal effects} of the pedagogy on classroom practices and student outcomes
-    \item \textbf{Systematic patterns} in how adolescents evaluate themselves and one another
-    \item \textbf{Whether the program narrows} evaluative gaps across gender and national origin
+    \item[\fadecolor{4}{1.}] \fadecolor{4}{Does the program change classroom processes and student outcomes?}
+    \item[\fadecolor{4}{2.}] \fadecolor{4}{Do systematic gender patterns emerge in self- and peer-evaluations?}
+    \item[\fadecolor{4}{3.}] \fadecolor{4}{Can the program reduce identity-based evaluative gaps?}
 \end{enumerate}
 \end{frame}
 
 
-% ---- Slide 4: Three Chapters ----
-\begin{frame}{Three chapters at a glance}
+% ---- Slide 3: The pedagogical program ----
+\begin{frame}{The pedagogical program for socio-emotional learning (SEL)}
 \small
-\centering
-\begin{tabular}{p{0.8cm} p{4.2cm} p{1.2cm} p{2cm}}
-\toprule
-Chapter & Question & Sample & Focus \\
-\midrule
-1 & Does the program work? & T + C & --- \\
-2 & Are evaluations gendered? & T only & Gender \\
-3 & Can the program reduce in-group bias? & T + C & Gender + Nationality \\
-\bottomrule
-\end{tabular}
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north east, inner sep=0pt] 
+    at ([xshift=-0.2cm, yshift=-2.8cm]current page.north east) 
+    {\includegraphics[width=0.40\textwidth]{figures/5-factor.png}};
+\end{tikzpicture}
+\begin{minipage}{0.58\textwidth}
+\textbf{Pentabilities}: Trains and mentors teachers to embed SEL into their daily instruction
+\begin{itemize}
+  \item Curriculum-embedded (no separate SEL as a subject)
+  \item 35 observable behaviors $\rightarrow$ 5 domains
+  \item Cooperative groups with rotating composition
+  \item 360$^{\circ}$ digital assessment (teacher, peer, self)
+  \item Evidence-based feedback reports for goal-setting (\textit{``formative assessment''})
+\end{itemize}
+\end{minipage}
+\vspace{0.3cm}
+
+\textcolor{HopBlue}{\textbf{$\Rightarrow$} Pedagogy and measurement are intertwined}
 \end{frame}
 
 
-% ---- Slide 6: The Pedagogical Program ----
-\begin{frame}{The Pedagogical Program}
-\footnotesize
-\begin{columns}[T,onlytextwidth]
-  \begin{column}{0.68\textwidth}
-    \begin{itemize}
-      \item \textbf{Context:} 40 public secondary schools in Catalonia, Spain (2022--2023)
-      \item 148 classrooms, 129 teachers, 2,451 students aged 12--17
-      \item Schools serving predominantly disadvantaged communities (stratified: 50\% medium, 50\% high complexity)
-      \item \textbf{Program} (developed by Pentabilities SL):
-      \begin{itemize}\footnotesize
-        \item Curriculum-embedded SEL: integrated into regular instruction, not a separate class
-        \item Built on observable behaviors reflecting latent SES \citep{Heckman2012-nt, Jackson2018-ho}
-        \item 35 observable behaviors organized into 5 domains
-        \item Cooperative group work with rotating team composition
-        \item Digital 360$^{\circ}$ assessment: teachers, peers, and students record ratings via app
-        \item Evidence-based feedback: periodic reports guide goal-setting and reflection
-      \end{itemize}
-    \end{itemize}
-  \end{column}
-  \begin{column}{0.30\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{figures/PB 5-factor.png}
-  \end{column}
-\end{columns}
-\vspace{0.2cm}
-\footnotesize\textbf{Key design feature:} Pedagogy and measurement are intertwined --- the same system that supports skill development also generates the data
-\end{frame}
-
-
-% ---- Slide 7: Five Domains ----
-\begin{frame}{Five Domains}
-%TODO: Reuse the colorful 5-domain card from existing slides
-%\includegraphics[width=\linewidth]{figures/PB 5-factor.png}
+% ---- Slide 4: Five domains ----
+\begin{frame}{Five domains and observable behaviors}
 \begin{center}
-\small
-\begin{tabular}{lp{8cm}}
-\toprule
-\textbf{Domain} & \textbf{Example behaviors} \\
-\midrule
-Responsibility & Works consistently, perseveres through difficulties, respects rules \\
-Autonomy \& Initiative & Brings up ideas, works with determination, takes active role \\
-Cooperation & Listens to others, encourages participation, facilitates conflict resolution \\
-Emotional Management & Remains calm under pressure, controls emotions, accepts mistakes \\
-Thinking Abilities & Makes good reflections, asks good questions, proposes strategies \\
-\bottomrule
-\end{tabular}
+    \includegraphics[width=0.85\linewidth]{figures/PB-white.png}
 \end{center}
-
-\vspace{0.3cm}
-Each behavior scored on 1--5 Likert scale by multiple raters
 \end{frame}
 
-
-% ---- Slide 8: The RCT Design ----
-\begin{frame}{The RCT Design}
+% ---- Slide 5: In the classroom ----
+\begin{frame}{In the classroom}
 \small
-\textbf{Randomization:} Grade level within schools (cluster)
+\begin{wrapfigure}{r}{0.38\textwidth}
+  \vspace{-0.2cm}
+  \includegraphics[width=\linewidth]{figures/classroom.png}
+\end{wrapfigure}
+\textbf{Teachers run structured, EdTech-supported pedagogical cycles}
 \begin{itemize}
-    \item Stratified by school disadvantage level
-    \item Treatment: 69 classrooms (1,164 students) --- Control: 72 classrooms (1,200 students)
-    \item Balanced on all observable student, family, and school characteristics
+    \item Teachers plan collaborative activities targeting specific behaviors (e.g., ``remains calm under pressure'')
+    \item Students work in random and rotating groups of 3--5
+    \item Real-time evidence collected via mobile/web app
 \end{itemize}
+\end{frame}
 
+% ---- Slide 6: Multi-rater assessment ----
+\begin{frame}{Multi-rater assessment}\label{slide:classroom}
+\small
+\textbf{After each activity:} Multi-rater scoring on a 5-point scale
+\begin{itemize}
+    \item Students rate themselves and group peers; teachers rate students
+    \item Ratings are confidential (not tied to formal grades); used to generate feedback reports
+    \item External observers (8--10 per classroom) provide independent ratings for research only
+\end{itemize}
 \vspace{0.3cm}
-\textbf{Three measurement instruments:}
+\textcolor{HopBlue}{\textbf{Key design feature:}} A common behavioral rubric enables direct comparisons across rater types.
+\end{frame}
 
+% ---- Slide 7: EdTech ----
+\begin{frame}{EdTech integration}
 \footnotesize
-\begin{tabular}{lllll}
-\toprule
-Instrument & Setting & Raters & T/C & Used in \\
-\midrule
-\textbf{CO} & Regular class, repeated & Self, Peer, Tch, EO & T only & Ch.1, 2 \\
-\textbf{FA} & Lab-in-the-field, random groups & Self, Peer, EO & T + C & Ch.2, 3 \\
-\textbf{BESSI} & Endline survey (Soto et al., 2022) & Self, Peer, Tch & T + C & Ch.2, 3 \\
-\bottomrule
-\end{tabular}
+\begin{itemize}
+    \item Streamlines the observation-feedback loop
+    \item \textcolor{HopBlue}{\textbf{Mobile/web app:}} Real-time behavior input from teachers, self, and peers
+    \item  \textcolor{HopBlue}{\textbf{Dashboard:}} Aggregates data into user-friendly reports to facilitate feedback
+\end{itemize}
+\begin{center}
+    \includegraphics[width=0.85\linewidth]{figures/edtech2.png}
+\end{center}
 \end{frame}
 
+% ---- Slide 8: Teacher training and mentoring ----
+\begin{frame}{Teacher training and mentoring}
+\begin{itemize}
+  \item<1-> Professional development training
+    \begin{itemize}
+      \item \textbf{4-hour online course:} fundamentals of SES and the digital tool
+      \item \textbf{4-hour face-to-face training:} planning activities within
+            the Pentabilities cycle, formative assessment of SES
+    \end{itemize}
+\vspace{0.4cm}
+  \item<2-> Follow-up mentoring
+    \begin{itemize}
+      \item \textbf{Monthly mentor visits:} classroom observation, debrief with teacher
+      \item \textbf{2 focus groups:} collective reflection and best practices
+    \end{itemize}
+\end{itemize}
+\end{frame}
 
-% ---- Slide 9: Data Architecture ----
-\begin{frame}{Data Architecture: 360$^{\circ}$ Measurement}
+% ---- Slide 9: The study design ----
+\begin{frame}{The study design: Clustered RCT}\label{slide:design}
 \small
-%TODO: Insert diagram showing the 360° measurement system
-%\includegraphics[width=0.8\textwidth]{figures/data_architecture.png}
-
-For each student, we observe:
+\textbf{Sample frame}
 \begin{itemize}
-    \item How they rate \textbf{themselves} (SELF)
-    \item How \textbf{peers} rate them (CO/PEER)
-    \item How \textbf{teachers} rate them (TCH)
-    \item How \textbf{external observers} rate them (EO)
+    \item 40 secondary schools, 141 classrooms, 116 teachers, 2,450 students (ages 12--17)
+    \item Recruitment: public channels, voluntary, targeted schools with underprivileged students (high complexity)
 \end{itemize}
-
-\vspace{0.3cm}
-$\Rightarrow$ This multi-rater design lets us:
+\vspace{0.4cm}
+\textbf{Randomization and Intervention}
 \begin{itemize}
-    \item Benchmark self-perception against ability (teacher, EO)
-    \item Isolate who drives evaluation gaps (student gender $\times$ peer gender)
-    \item Separate skill differences from perception differences
+    \item Randomization at the grade level within schools, stratified by school disadvantage level
+    \item \textbf{Treatment}: Teachers in selected grades receive the SEL training program
+    \item \textbf{Control}: Business as usual
 \end{itemize}
+\hyperlink{complexity}{\beamergotobutton{Complexity}} \hyperlink{randomization}{\beamergotobutton{Randomization}}
 \end{frame}
+
+% ---- Slide 10: Three chapters at a glance ----
+\begin{frame}{Three chapters at a glance}
+\centering
+\vspace{0.1cm}
+\begin{tikzpicture}[
+  arr/.style={-{Stealth[length=5pt,width=4pt]}, HopBlue!60, line width=1pt},
+  % Shadow layer
+  shadow/.style={fill=black!8, rounded corners=6pt},
+  % Card body
+  card/.style={fill=white, draw=HopBlue!30, line width=0.6pt, rounded corners=6pt},
+  % Header
+  header/.style={fill=HopBlue, rounded corners=6pt},
+]
+
+  % ---- Shadows (offset down-right) ----
+  \fill[shadow] (-1.6, -0.05) rectangle (1.8, -4.75);
+  \fill[shadow] (2.45, -0.05) rectangle (5.85, -4.75);
+  \fill[shadow] (6.5, -0.05) rectangle (9.9, -4.75);
+
+  % ---- Card bodies ----
+  \draw[card] (-1.7, 0.2) rectangle (1.7, -4.5);
+  \draw[card] (2.35, 0.2) rectangle (5.75, -4.5);
+  \draw[card] (6.4, 0.2) rectangle (9.8, -4.5);
+
+  % ---- Header bands (full rounded top, square bottom) ----
+  \fill[HopBlue, rounded corners=6pt]
+    (-1.7, 0.2) rectangle (1.7, -0.55);
+  \fill[HopBlue] (-1.7, -0.3) rectangle (1.7, -0.55);
+
+  \fill[HopBlue, rounded corners=6pt]
+    (2.35, 0.2) rectangle (5.75, -0.55);
+  \fill[HopBlue] (2.35, -0.3) rectangle (5.75, -0.55);
+
+  \fill[HopBlue, rounded corners=6pt]
+    (6.4, 0.2) rectangle (9.8, -0.55);
+  \fill[HopBlue] (6.4, -0.3) rectangle (9.8, -0.55);
+
+  % ---- Arrows ----
+  \draw[arr] (1.85, -2.1) -- (2.2, -2.1);
+  \draw[arr] (5.9, -2.1) -- (6.25, -2.1);
+
+  % ---- Chapter headings ----
+  \node[font=\small\bfseries, text=white] at (0, -0.17) {Chapter 1};
+  \node[font=\small\bfseries, text=white] at (4.05, -0.17) {Chapter 2};
+  \node[font=\small\bfseries, text=white] at (8.1, -0.17) {Chapter 3};
+
+  % ---- Questions ----
+  \node[anchor=north, text width=2.8cm, font=\footnotesize, align=center] at (0, -0.85)
+    {Average treatment effects on classroom and students};
+  \node[anchor=north, text width=2.8cm, font=\footnotesize, align=center] at (4.05, -0.85)
+    {Gender differences in self and peer evaluations};
+  \node[anchor=north, text width=2.8cm, font=\footnotesize, align=center] at (8.1, -0.85)
+    {Program and reduction of in-group bias};
+
+  % ---- Separator lines ----
+  \draw[HopBlue!25, thin] (-1.3, -2.7) -- (1.3, -2.7);
+  \draw[HopBlue!25, thin] (2.75, -2.7) -- (5.35, -2.7);
+  \draw[HopBlue!25, thin] (6.8, -2.7) -- (9.4, -2.7);
+
+  % ---- Sample + Focus ----
+  \node[anchor=north, text width=2.8cm, font=\scriptsize, align=left, text=black!70] at (0, -2.95)
+    {\textbf{Sample:} T + C\\\textbf{Focus:} Setting \& Program};
+  \node[anchor=north, text width=2.8cm, font=\scriptsize, align=center, text=black!70] at (4.05, -2.95)
+    {\textbf{Sample:} T only\\\textbf{Focus:} Gender};
+  \node[anchor=north, text width=2.8cm, font=\scriptsize, align=center, text=black!70] at (8.1, -2.95)
+    {\textbf{Sample:} T + C\\\textbf{Focus:} Gender \& Nationality};
+
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}<0>[label=thesismap]{Roadmap}
+\vspace{0.5cm}
+\begin{enumerate}
+    \item \fadecolor{1}{\textbf{Ch.\ 1:} Does the pedagogy change classroom practices and student outcomes?}
+    \vspace{0.4cm}
+    \item \fadecolor{2}{\textbf{Ch.\ 2:} Do systematic gender patterns emerge in self- and peer-evaluations?}
+    \vspace{0.4cm}
+    \item \fadecolor{3}{\textbf{Ch.\ 3:} Can the program reduce identity-based evaluative gaps?}
+\end{enumerate}
+\end{frame}
+
+ 
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CHAPTER 1: TREATMENT EFFECTS  (slides 10--14 + bridge 16)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Chapter 1}
-% NOTE: \AtBeginSection auto-generates the chapter divider slide
+% ---- Chapter 1 Divider ----
+\begin{frame}[plain]
+\vspace{2.5cm}
+{\LARGE \textbf{Chapter 1}}\\
+{\color{HopBlue}\rule{0.4\linewidth}{2pt}}
+\end{frame}
 
-% ---- Slide 11: Empirical Strategy ----
-\begin{frame}{Empirical Strategy}
+
+% ---- Slide 11: Chapter 1 framing ----
+\begin{frame}{RCT Average treatment effects}\label{slide:ate}
 \small
-\textbf{Intent-to-treat (ITT), ANCOVA specification:}
-\begin{equation*}
-Y_{i,el} = \alpha + \alpha_1 \cdot \text{Treated}_i + \mathbf{X}_{i,bl}' \boldsymbol{\beta} + \text{Strata\_FE} + \varepsilon_i
-\end{equation*}
-
-\begin{itemize}
-    \item Outcome $Y$ measured at endline; baseline controls $\mathbf{X}_{bl}$ when available
-    \item Strata fixed effects (randomization block)
-    \item Standard errors clustered at school-grade level
-\end{itemize}
-
+\vspace{0.2cm}
+\textbf{Question:} Does embedding SEL into daily instruction reshape what happens in the classroom and improve student outcomes? \\
 \vspace{0.3cm}
-\textbf{Outcomes:}
+\textbf{Timeline}
+\begin{itemize}
+    \item Teacher training: December 2022 -- January 2023
+    \item Implementation: January -- June 2023 (two academic terms)
+\end{itemize}
+\hyperlink{timeline}{\beamergotobutton{Timeline}} \\
+\vspace{0.3cm}
+\textbf{Outcomes}
 \begin{enumerate}
-    \item Classroom environment (teacher time use, student perceptions)
-    \item Student socioemotional skills (BESSI, FA, surveys)
-    \item Academic outcomes (GPA, attendance)
+    \item \textbf{Classroom environment:} Student perceptions of their teacher, Teacher time use
+    \item \textbf{Socioemotional skills:} Standardized group activity, Survey assessments
+    \item \textbf{Academic:} GPA, Attendance (administrative records)
 \end{enumerate}
+\end{frame}
 
-\vspace{0.3cm}
+% ---- Slide 12: Data sources ----
+\begin{frame}{Data sources}\label{slide:data}
+\begin{center}
+    \includegraphics[width=\textwidth]{figures/datamap.png}
+\end{center}
+\hyperlink{standard_activity}{\beamergotobutton{Activity}}
+\end{frame}
+
+% ---- Slide 13: Econometric specification ----
+\begin{frame}{Econometric specification}
+\small
+Student-level or teacher-level regressions estimating intent-to-treat (ITT) effects:
+\begin{equation*}
+y_{igst} = \alpha + \beta T_{igs} + \gamma y_{igs0}
+  + \sum_{w=1}^{W} \delta_i^w + \sum_{c=1}^{4} \eta_s^c
+  + \mu_s + \varepsilon_{igst}
+\end{equation*}
+\begin{itemize}
 \footnotesize
-\textit{Note: A substantially updated version --- with coauthors Calsamiglia, De Giorgi, Navarro-Sola, and Salvati --- was presented at CESifo 2025. The main advance: the program's effects on classroom processes are concentrated among disadvantaged students.}
+    \item $y_{igs0}$: Outcome at baseline \textit{(when available)}
+    \item $\mu_s$: School fixed effects
+    \item $\delta$: school disadvantage level strata, $\eta$: week-of-the-year of measurement FE
+    \item Standard errors clustered at the school-grade level \citep{Abadie2022-xz}
+\end{itemize}
 \end{frame}
 
 
-% ---- Slide 12: Classroom Environment ----
-\begin{frame}{Result: Classroom Environment Transforms}
+\begin{frame}{Sample characteristics}\label{slide:sample}
 \small
-\textbf{Teachers reallocate time:}
-\begin{itemize}
-    \item 42\% reduction in time managing discipline during class
-    \item 26\% reduction outside classroom
-    \item Time shifts toward student autonomy and peer exchange
-\end{itemize}
-
+\textbf{39 schools, 80 grades, 148 classrooms, 2,165 students} \\
 \vspace{0.3cm}
-\textbf{Students notice the change:}
+\textcolor{HopBlue}{\textbf{Students}}
 \begin{itemize}
-    \item Treated students rate teachers +0.13 to +0.20 SD higher on composite perception score
-    \item Higher ratings on classroom atmosphere and feedback quality items
+\item Ages 12--17 (mean 13.3), 48\% female
+\item 87\% born in Spain; 61\% both caregivers born in Spain
 \end{itemize}
+\vspace{0.1cm}
+\textcolor{HopBlue}{\textbf{Schools}}
+\begin{itemize}
+\item \textbf{ESO grades:} 42\% 1st, 32\% 2nd, 22\% 3rd, 4\% 4th
+\item \textbf{Province:} 88\% Barcelona, 8\% Lleida, 2\% Girona, 2\% Tarragona
+\item \textbf{Complexity:} 33\% medium-low, 28\% medium-high, 31\% high, 9\% very high
+\end{itemize}
+\vspace{0.1cm}
 
-\vspace{0.5cm}
-\textit{The program reorganizes how classrooms function --- changing the structure of interactions and the evaluative environment}
+\textcolor{HopBlue}{\textbf{Baseline balance:}} No systematic differences between T and C on student, teacher, or school-grade characteristics
+\vspace{0.1cm}
+\hyperlink{balance}{\beamergotobutton{Balance}} \hyperlink{descriptives}{\beamergotobutton{Descriptives}} \hyperlink{slide:attrition}{\beamergotobutton{Attrition}}
 \end{frame}
 
 
-% ---- Slide 13: Student Outcomes ----
-\begin{frame}{Result: Student Outcomes}
-\small
-\textbf{No short-run effects on:}
-\begin{itemize}
-    \item Socioemotional skills (behavioral task, survey assessments)
-    \item Academic achievement (GPA)
-    \item Attendance
-\end{itemize}
 
+\begin{frame}[plain]
+\vspace{2.5cm}
+{\large \textbf{1. Impacts on Classroom Environment}}\\
+{\color{HopBlue}\rule{0.4\linewidth}{2pt}}
+\end{frame}
+
+% ---- Slide 14: Student perceptions ----
+\begin{frame}{Students perceive improvements in teaching practices}\label{slide:perception}
+\scriptsize
+\vspace{0.8cm}
+% ---- Table floated top-right ----
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north east, inner sep=0pt]
+    at ([xshift=-0.9cm, yshift=-2.8cm]current page.north east)
+    {\input{tables/perception}};
+\end{tikzpicture}
+% ---- Text ----
+\begin{minipage}{0.45\textwidth}
+\textbf{22-item student survey} on classroom experiences
+\vspace{0.2cm}
+\begin{itemize}
+  \setlength{\itemsep}{2pt}
+  \item Individualized attention\\
+    \textit{\color{gray}``Makes me feel they care about me''}
+  \item Whole-classroom effort\\
+    \textit{\color{gray}``Encourages students to work independently''}
+  \item Instructional clarity\\
+    \textit{\color{gray}``Explains objectives at the start of class''}
+  \item Peer interactions\\
+    \textit{\color{gray}``Feedback from classmates helps me improve''}
+\end{itemize}
 \vspace{1cm}
-%TODO: Insert treatment effect estimates table or figure
-%\includegraphics[width=0.7\textwidth]{figures/ch1_outcomes.png}
+\hyperlink{perception}{\beamergotobutton{Survey items}}
+\end{minipage}
 \end{frame}
 
 
-% ---- Slide 14: The Evaluative Environment ----
-\begin{frame}{The Evaluative Environment}
-\small
-The program introduces cooperative group work, behavior-anchored rubrics, and repeated multi-rater assessment. The first thing that changes is the \textbf{informational environment}:
 
+% ---- Slide 15: Teacher time use ----
+\begin{frame}{Teachers reallocate classroom time}
+\input{tables/tch_timeuse}
+\vspace{0.2cm}
+\scriptsize
 \begin{itemize}
-    \item Students evaluate each other systematically, using shared criteria
-    \item The classroom becomes a space where perceptions of competence are actively constructed
-    \item The same infrastructure that supports skill development generates the data that reveals how students perceive themselves and each other
+\item \textbf{Leading small groups} drops by $\sim$1.5 h/week ($-$43\% of control mean)
+\item \textbf{Disciplinary issues} drops by $\sim$35 min/week ($-$42\% of control mean)
 \end{itemize}
-
-\vspace{0.5cm}
-\textit{If the classroom environment has changed, the question becomes: for whom has it changed, and what patterns emerge in how students use these new evaluative tools?}
-
-%TODO: Insert Theory of Change flowchart
-%\includegraphics[width=0.8\textwidth]{figures/theory_of_change.png}
 \end{frame}
+% ----
+
+\begin{frame}[plain]
+\vspace{2.5cm}
+{\large \textbf{2. \& 3. Impacts on Student Outcomes}}\\
+{\color{HopBlue}\rule{0.4\linewidth}{2pt}}
+\end{frame}
+
+% ---- Slide 16: Student outcomes ----
+\begin{frame}{Limited average effects on student outcomes}
+\small
+\textcolor{HopBlue}{\textbf{Socioemotional skills}}
+\begin{itemize}
+\item Classroom observations (Pentabilities): null
+\item Standardized group activity (Final Activity): null
+\item Survey assessments (BESSI): null, except Innovation (+0.09 SD\sym{**})
+\end{itemize}
+\vspace{0.2cm}
+\textcolor{HopBlue}{\textbf{Academic outcomes}}
+\begin{itemize}
+\item GPA: null
+\item Attendance: null
+\end{itemize}
+\vspace{0.3cm}
+\textcolor{HopBlue}{\textbf{$\Rightarrow$}} \textbf{First margin:} the program reshapes classroom processes. Skill-level effects likely require longer exposure. \\
+\vspace{0.1cm}
+\textcolor{HopBlue}{\textbf{$\Rightarrow$}} \textbf{Updated WP:} significant distributional effects by socioeconomic background and baseline skills, ATE masks significant distributional patterns.
+\end{frame}
+
+% ---- Slide 17: Ch.1 takeaway and bridge to Ch.2 ----
+\begin{frame}{Chapter 1: Takeaways}
+\small
+\begin{enumerate}
+\item \fadecolor{1}{\textbf{Teaching practices transform.} Students rate treated teachers 0.20 SD \textbf{$\uparrow$}. Teachers \textbf{$\downarrow$} disciplinary time by 42\% and \textbf{$\downarrow$} small-group management time by 40\%.}
+\vspace{0.2cm}
+\item \fadecolor{2}{\textbf{No average effects on student outcomes.} Socioemotional skills, GPA, and attendance show no detectable impacts at six months.}
+\vspace{0.2cm}
+\item \fadecolor{3}{\textbf{The evaluative environment is what changes first.} The program introduces cooperative group work, behavior-anchored rubrics, and repeated multi-rater assessment. Students evaluate each other systematically, using shared criteria.}
+\end{enumerate}
+\vspace{0.5cm}
+\onslide<4->{%
+\textit{The treatment produces repeated 360 evaluations: teacher, peer, and self, on the same behaviors. Does  gender shape who sees what?}
+}
+\end{frame}
+
+
+% ---- Chapter 2 Divider ----
+\section{Chapter 2}
+\begin{frame}[plain]
+\vspace{2.5cm}
+{\LARGE \textbf{Chapter 2}}\\
+{\color{HopBlue}\rule{0.4\linewidth}{2pt}}
+\end{frame}
+
 
 
 % ---- Bridge 1 (slide 16) ----
-\begin{frame}{From Average Effects to Gender Dynamics}
-\small
-\textbf{Chapter 1 shows the program changes how classrooms operate.}
-
-\vspace{0.3cm}
-But the 360$^{\circ}$ measurement system reveals something else: when students evaluate themselves and each other, systematic patterns emerge that follow gender lines.
-
-\vspace{0.5cm}
-\textbf{Next:} Do self- and peer-perceptions of SES differ for female vs.\ male adolescents?
-\end{frame}
+\againframe<2>{thesismap}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CHAPTER 2: GENDER GAPS  (slides 17--28 + bridge 29)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Chapter 2}
-
-% ---- Slide 18: Why Adolescence? ----
-\begin{frame}{Why Adolescence?}
-\small
-\begin{itemize}
-    \item Ages 12--16: high neuroplasticity, self-beliefs and aspirations are particularly malleable \citep{Steinberg2014-pe}
-    \item \textbf{Self-identity formation:} Who am I? What am I good at? Where do I fit in?
-    \item \textbf{Peer-influence peaks:} Students look to classmates for cues --- who is good at what?
-    \item Gendered norms around ``girls do well'' vs.\ ``boys do well'' solidify during these years
-\end{itemize}
-
-\vspace{0.5cm}
-\textit{Early differences in self-beliefs or peer recognition can shape confidence and aspirations for years to come}
-\end{frame}
-
-
 % ---- Slide 19: Two Research Questions ----
 \begin{frame}{Two Research Questions}
 \small
@@ -473,6 +637,23 @@ Is there a systematic gender pattern in how peers evaluate each other's SES?
     \item Gendered patterns that form in adolescence can influence later educational and labor market choices
 \end{itemize}
 \end{frame}
+
+% ---- Slide 18: Why Adolescence? ----
+\begin{frame}{Adolescence as a formative period}
+\small
+\begin{itemize}
+    \item Ages 12--16: high neuroplasticity, self-beliefs and aspirations are particularly malleable \citep{Steinberg2014-pe}
+    \item \textbf{Self-identity formation:} Who am I? What am I good at? Where do I fit in?
+    \item \textbf{Peer-influence peaks:} Students look to classmates for cues --- who is good at what?
+    \item Gendered norms around ``girls do well'' vs.\ ``boys do well'' solidify during these years
+\end{itemize}
+
+\vspace{0.5cm}
+\textit{Early differences in self-beliefs or peer recognition can shape confidence and aspirations for years to come}
+\end{frame}
+
+
+
 
 
 % ---- Slide 20: Empirical Strategy — Self-Evaluation ----
@@ -602,11 +783,11 @@ Thinking & $-$0.00 & $-$0.33\sym{***} & \hlcoef{$+$0.37\sym{***}} \\
 
 \vspace{0.3cm}
 \begin{enumerate}
-    \item<1-> \fadecolor{1}{\textbf{Male peers are gender-neutral:} $\beta_1$ is small/insignificant $\rightarrow$ males don't rate female students differently from male students}
+    \item \fadecolor{1}{\textbf{Male peers are gender-neutral:} $\beta_1$ is small/insignificant $\rightarrow$ males don't rate female students differently from male students}
     \vspace{0.2cm}
-    \item<2-> \fadecolor{2}{\textbf{Female peers are strict toward males:} $\beta_2$ is negative and significant in all domains $\rightarrow$ female peers give lower scores when rating male students}
+    \item \fadecolor{2}{\textbf{Female peers are strict toward males:} $\beta_2$ is negative and significant in all domains $\rightarrow$ female peers give lower scores when rating male students}
     \vspace{0.2cm}
-    \item<3-> \fadecolor{3}{\textbf{Female-female premium:} $\beta_3$ is large and positive $\rightarrow$ when a female peer rates a female student, there is an additional +0.24 to +0.43 SD boost}
+    \item \fadecolor{3}{\textbf{Female-female premium:} $\beta_3$ is large and positive $\rightarrow$ when a female peer rates a female student, there is an additional +0.24 to +0.43 SD boost}
 \end{enumerate}
 
 \vspace{0.3cm}
@@ -735,25 +916,18 @@ Thinking & $-$0.00 & $-$0.33\sym{***} & \hlcoef{$+$0.37\sym{***}} \\
 
 
 % ---- Bridge 2 (slide 29) ----
-\begin{frame}{From Documenting Patterns to Testing Solutions}
-\small
-\textbf{Chapter 2 documented systematic identity-based patterns in evaluations.}
-
-\vspace{0.3cm}
-The program in Chapter 1 was not designed as a debiasing intervention --- it targets skill development through cooperative work and structured feedback.
-
-\vspace{0.3cm}
-\textbf{But its features} --- rotating groups, cross-group interaction, behavior-anchored criteria --- \textbf{align with conditions known to reduce in-group bias} (Allport, 1954; Pettigrew \& Tropp, 2006).
-
-\vspace{0.5cm}
-\textbf{Next:} Can we detect causal debiasing spillovers?
-\end{frame}
+\againframe<3>{thesismap}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CHAPTER 3: IN-GROUP FAVORITISM  (slides 30--39)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Chapter 3}
+\begin{frame}[plain]
+\vspace{2.5cm}
+{\LARGE \textbf{Chapter 3}}\\
+{\color{HopBlue}\rule{0.4\linewidth}{2pt}}
+\end{frame}
 
 % ---- Slide 31: Research Questions + Design ----
 \begin{frame}{Research Questions and Design}
@@ -1152,6 +1326,106 @@ Universitat Aut\`onoma de Barcelona
 \bibliography{paperpile}
 \end{frame}
 
+\section*{Supplemental}
+
+\begin{frame}{Complexity}
+\label{complexity}
+\hyperlink{slide:design}{\beamerreturnbutton{Back}}
+\begin{figure}
+    \centering \includegraphics[height=0.8\paperheight, width=0.6\textwidth]{figures/complexity.png}
+\end{figure} 
+\end{frame}
+
+\begin{frame}{Randomization at grade level}
+\label{randomization}
+\hyperlink{slide:design}{\beamerreturnbutton{Back}}
+\begin{figure}
+    \centering \includegraphics[width=\textwidth]{figures/randomization.png}
+\end{figure} 
+\end{frame}
+
+\begin{frame}{Standardized Activity}
+\label{standard_activity}
+\begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/marshmallowI.png}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/marshmallowII.png}
+\end{minipage}
+\hyperlink{slide:data}{\beamerreturnbutton{Back}}
+\end{frame}
+
+
+\begin{frame}{Timeline}
+\label{timeline}
+\hyperlink{slide:ate}{\beamerreturnbutton{Back}}
+\begin{figure}
+    \centering \includegraphics[width=\textwidth]{figures/timeline.png}
+\end{figure} 
+\end{frame}
+
+\begin{frame}{Student perceptions of teachers survey}\label{perception}
+\setbeamertemplate{enumerate items}[default]
+\begin{columns}[T,onlytextwidth]
+  \begin{column}{0.45\textwidth}
+    \textbf{\scriptsize 11-item questionnaire}
+    \tiny
+    \begin{enumerate}
+      \setlength{\itemsep}{0pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \item Makes me feel that they care about me.
+      \item Shows interest in my work.
+      \item Motivates me to achieve my goals.
+      \item Encourages me to explain my reasoning.
+      \item Gets the whole class to actively participate in the activity.
+      \item Praises students for their ideas or contributions.
+      \item Encourages students to ask questions or make comments in class.
+      \item Criticizes students' mistakes negatively.
+      \item Encourages students to work independently.
+      \item Facilitates conflict resolution.
+      \item Helps us support each other.
+    \end{enumerate}
+  \end{column}
+  \begin{column}{0.53\textwidth}
+    \textbf{\scriptsize Extra 11-items in endline}
+    \tiny
+    \begin{enumerate}
+      \setlength{\itemsep}{0pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \item Explains objectives at the beginning of class and reviews what we have learned at the end.
+      \item I feel like I learn when working in groups with the activities planned by the teacher.
+      \item The teacher establishes rules that everyone understands and ensures they are followed.
+      \item Maintains order and calm throughout the class.
+      \item The teacher knows me and understands my strengths and weaknesses.
+      \item Helps us learn to resolve conflicts on our own.
+      \item Fosters a harmonious and positive classroom environment.
+      \item Feedback from my classmates helps me understand their perspective and improve.
+      \item Through classroom reflections, I have learned to decide what to change to improve.
+      \item Knows how to connect with the students.
+      \item Knows how to capture the students' attention.
+    \end{enumerate}
+  \end{column}
+\end{columns}
+\vfill
+\hyperlink{slide:perception}{\beamerreturnbutton{Back}}
+\end{frame}
+
+\begin{frame}{Descriptives}
+\label{descriptives}
+\hyperlink{slide:sample}{\beamerreturnbutton{Back}}
+\input{tables/descriptive}
+\end{frame}
+
+\begin{frame}{Student Balance}
+\label{balance}
+\hyperlink{slide:sample}{\beamerreturnbutton{Back}}
+\input{tables/student_baseline}
+\end{frame}
+
 
 \section*{Backup}
 
@@ -1286,33 +1560,66 @@ Friendship predicts higher ratings ($\gamma \approx 0.15$ SD, significant), but 
 \end{frame}
 
 
-% ---- Sample Attrition Funnel ----
-\begin{frame}{Sample Attrition Funnel}
-\label{slide:attrition}
+  % ---- Sample Attrition Funnel ----        
+  \begin{frame}{Sample Attrition Funnel} 
+  \label{slide:attrition}                
+  \scriptsize
+  \begin{center}                             
+  \begin{tabular}{clc}
+  \toprule                                   
+  Stage & What happens & Approx.\ $N$ \\
+  \midrule                               
+  0 & Randomized universe (88 school-grade clusters) & 4,763 \\
+  1 & Non-research removal, out-of-research grades & $\sim$3,648 \\                                                                   
+  2 & Parental consent ($\sim$66\%) & $\sim$2,680 \\                                                                                  
+  3 & Surveyed classrooms (148 of 195, budget constraint) & $\sim$2,450 \\                                                            
+  4 & Post-randomization attrition (5 classrooms) & $\sim$2,364 \\                                                                    
+  5 & \textbf{With baseline + endline survey data} & \textbf{2,165} \\                                                                
+  \midrule                                                                                                                            
+  6a & Ch.1 analysis (outcome-specific) & 1,092--1,892 \\                                                                             
+  6b & Ch.2 (CO, T only by design) & $\sim$1,100 \\
+  6c & Ch.3 (FA/BESSI, T + C) & $\sim$2,100 \\                                                                                        
+  \bottomrule                                                                
+  \end{tabular}                                                           
+  \end{center}                                                                                               
+  \vspace{0.2cm}                         
+  \footnotesize
+  \begin{itemize}
+      \item Largest drop is consent ($\sim$34\%), standard for school-based RCTs in Spain                                             
+      \item 2,680 $\rightarrow$ 2,450 is survey logistics, not attrition (survey company budget)   
+      \item Ch.2 $N \approx$1,100 is smaller \emph{by design}: Pentabilities peer assessments only in treated classrooms              
+  \end{itemize}                                                                                                                       
+  \end{frame}    
+
+% ---- Stratification and Randomization ----
+\begin{frame}{Stratification and Randomization}
+\label{slide:stratification}
 \scriptsize
+
+\textbf{Stratification variable:} School disadvantage level (4 categories, Catalan education authority administrative composite index)
+
+\vspace{0.3cm}
 \begin{center}
-\begin{tabular}{clc}
+\begin{tabular}{llccc}
 \toprule
-Stage & What happens & Approx.\ $N$ \\
+\textbf{Complexity} & \textbf{Schools} & \textbf{Control} & \textbf{Treatment} & \textbf{Total grades} \\
 \midrule
-0 & Raw universe & $\sim$3,648 \\
-1--2 & Non-research removal, out-of-research grades & --- \\
-3 & Consent ($\sim$66\% parental consent) & $\sim$2,680 \\
-4 & Survey logistics (148 of 195 classrooms) & $\sim$2,451 \\
-5 & Post-randomization attrition (5 classrooms) & $\sim$2,364 \\
-6a & Ch.1 (RCT): regression-specific & 1,092--1,892 \\
-6b & Ch.2 (Gender, CO): T only by design & 1,102 \\
-6c & Ch.3 (FA/BESSI): T + C retained & 2,100--2,364 \\
+Low-Mid (Mitjana baixa)  & 12 & 12 & 14 & 26 \\
+High-Mid (Mitjana alta)  & 11 & 11 & 11 & 22 \\
+High (Alta)              & 13 & 14 & 15 & 29 \\
+Very High (Molt alta)    &  4 &  4 &  4 &  8 \\
+\midrule
+\textbf{Total}           & \textbf{40} & \textbf{41} & \textbf{44} & \textbf{85} \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\vspace{0.2cm}
-\footnotesize
+\vspace{0.3cm}
 \begin{itemize}
-    \item Largest drop is consent ($\sim$34\%) --- standard for school-based RCTs in Spain
-    \item 2,680 $\rightarrow$ 2,451 is survey logistics, not attrition (GESOP budget constraints)
-    \item Ch.2 $N$=1,102 is smaller \emph{by design}: peer assessments only in treated classrooms
+    \item Randomization at the \textbf{grade-within-school} level, stratified by school disadvantage
+    \item Every stratum contains both treatment and control grades
+    \item Distribution reflects recruitment targeting disadvantaged populations
+    \item School FE absorb strata FE (disadvantage category is school-level)
 \end{itemize}
 \end{frame}
 
