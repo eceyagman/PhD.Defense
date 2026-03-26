@@ -607,96 +607,62 @@ y_{ijs} &= \alpha
 \end{frame}
 % ---- 27: Self-evaluation results ----
 \begin{frame}{Self-score: Females underrate themselves}
-\small
-\textbf{Q1:} Do female students rate their own SES differently from males, conditional on ability?
-\vspace{0.2cm}
 \centering
-\resizebox{0.88\textwidth}{!}{%
-\begin{threeparttable}
-\begin{tabular}{l*{5}{c}}
-\toprule
- & (1) & (2) & (3) & (4) & (5) \\
- & Autonomy & Cooperation & Responsibility & Emotion & Thinking \\
-\midrule
-\rowcolor{HopBlue!8}
-Female Student ($\bm{\beta_1}$) & $-$0.141\sym{*} & $-$0.101 & $-$0.085 & $-$\textbf{0.302}\sym{***} & $-$\textbf{0.239}\sym{***} \\
-\rowcolor{HopBlue!8}
- & (0.081) & (0.078) & (0.074) & (0.090) & (0.090) \\[3pt]
-Teacher Score & 0.177\sym{***} & 0.117\sym{**} & 0.137\sym{***} & 0.087 & 0.042 \\
- & (0.061) & (0.058) & (0.053) & (0.058) & (0.066) \\[3pt]
-Average Peer Score & 0.270\sym{***} & 0.290\sym{***} & 0.384\sym{***} & 0.319\sym{***} & 0.306\sym{***} \\
- & (0.080) & (0.074) & (0.068) & (0.089) & (0.080) \\
-\midrule
-Observations & 525 & 628 & 692 & 462 & 468 \\
-Adj.\ R-squared & 0.207 & 0.211 & 0.231 & 0.191 & 0.249 \\
-Classroom FE & Yes & Yes & Yes & Yes & Yes \\
-Socio-demographic controls & Yes & Yes & Yes & Yes & Yes \\
-\bottomrule
-\end{tabular}
-\begin{tablenotes}[flushleft]
-\scriptsize
-\item \textit{Notes:} Robust standard errors in parentheses, clustered at classroom level. Dependent variable is self-assigned z-score. \sym{*}$p<0.10$, \sym{**}$p<0.05$, \sym{***}$p<0.01$.
-\end{tablenotes}
-\end{threeparttable}
-}
-\vspace{0.2cm}
-\small
-\flushleft
-\textcolor{HopBlue}{\textbf{$\Rightarrow$}} Girls underrate themselves most in Emotional Management ($-$0.30 SD) and Thinking ($-$0.24 SD): stereotype-congruent domains.
+\resizebox{0.88\textwidth}{!}{\input{tables/self_main}}
+\vspace{0.15cm}
+\footnotesize
+\begin{itemize}
+\item[$\Rightarrow$] \textcolor{HopBlue}{Emotional Management} \textbf{$\downarrow$ 0.30 SD\sym{***}} and \textcolor{HopBlue}{Thinking Abilities} \textbf{$\downarrow$ 0.24 SD\sym{***}}, ``male-typed'' domains
+\end{itemize}
 \end{frame}
 % ---- 28: Peer-evaluation results + summary ----
 \begin{frame}{Peer-score: The Female-Female Premium}
 \label{slide:ff_premium}
-\small
-\textbf{Q2:} Is there a systematic gender pattern in how peers evaluate each other's SES?
-\vspace{0.1cm}
 \centering
-\resizebox{0.88\textwidth}{!}{%
-\begin{threeparttable}
-\begin{tabular}{l*{5}{c}}
-\toprule
- & (1) & (2) & (3) & (4) & (5) \\
- & Autonomy & Cooperation & Responsibility & Emotion & Thinking \\
-\midrule
-Female Student ($\beta_1$) & $-$0.086 & $-$0.112\sym{**} & $-$0.019 & $-$0.044 & $-$0.110 \\
- & (0.065) & (0.056) & (0.056) & (0.059) & (0.069) \\[2pt]
-Female Peer ($\beta_2$) & $-$0.207\sym{***} & $-$0.293\sym{***} & $-$0.156\sym{***} & $-$0.231\sym{***} & $-$0.205\sym{***} \\
- & (0.064) & (0.053) & (0.055) & (0.056) & (0.067) \\[2pt]
-\rowcolor{HopBlue!8}
-Fem.Stu $\times$ Fem.Peer ($\bm{\beta_3}$) & 0.454\sym{***} & 0.406\sym{***} & 0.232\sym{***} & 0.357\sym{***} & 0.415\sym{***} \\
-\rowcolor{HopBlue!8}
- & (0.084) & (0.068) & (0.070) & (0.076) & (0.081) \\
-\midrule
-\rowcolor{HopBlue!8}
-$\beta_1 + \beta_3$ & 0.368\sym{***} & 0.294\sym{***} & 0.213\sym{***} & 0.312\sym{***} & 0.305\sym{***} \\
-\midrule
-Observations & 2,006 & 2,842 & 2,762 & 2,239 & 2,065 \\
-Classroom FE & Yes & Yes & Yes & Yes & Yes \\
-360$^{\circ}$ score controls & Yes & Yes & Yes & Yes & Yes \\
-\bottomrule
-\end{tabular}
-\begin{tablenotes}[flushleft]
-\scriptsize
-\item \textit{Notes:} Standard errors clustered at student level in parentheses. Dependent variable is peer-assigned z-score. Controls include self and teacher scores for both student and peer, plus background characteristics. \sym{*}$p<0.10$, \sym{**}$p<0.05$, \sym{***}$p<0.01$.
-\end{tablenotes}
-\end{threeparttable}
-}
+\resizebox{0.88\textwidth}{!}{\input{tables/peer_main}}
 \vspace{0.1cm}
-\small
-\flushleft
-\textcolor{HopBlue}{\textbf{$\Rightarrow$}} The premium emerges in female-female pairings: +0.21 to +0.37 SD above male-male baseline.
+\footnotesize
+\begin{itemize}
+\item[$\Rightarrow$] $\beta_1 \approx 0$: \textbf{male peers} are gender-neutral
+\item[$\Rightarrow$] $\beta_2 < 0$: \textbf{female peers} are strict toward males across all domains
+\item[$\Rightarrow$] $\bm{\beta_1 + \beta_3}$ female peer rating a female student (vs.\ male student): \textcolor{HopBlue}{\textbf{FF premium $\uparrow$ +0.21 to +0.37 SD}}
+\end{itemize}
 \vfill
 \scriptsize
 \hyperlink{slide:peer_full}{\beamergotobutton{Full Tables}}
+\hfill
 \hyperlink{slide:gender_int}{\beamergotobutton{Net Effect}}
+\hfill\mbox{}
 \end{frame}
 % ---- 29: Combined coefplot ----
-\begin{frame}{Self-underrating and FF premium across domains}
+\begin{frame}{Results so far: Self vs.\ Peer Evaluation}
+\begin{columns}[T]
+\begin{column}{0.35\textwidth}
+\vspace{0.3cm}
+\small
+\textcolor{HopBlue}{\textbf{Self-evaluation ($\bm{\beta_1}$):}}
+\begin{itemize}
+  \setlength{\itemsep}{3pt}
+  \item Girls rate themselves \emph{lower}
+  \item Largest in Emotion and Thinking
+\end{itemize}
+\vspace{0.3cm}
+\textcolor{HopBlue}{\textbf{Peer-evaluation ($\bm{\beta_1 + \beta_3}$):}}
+\begin{itemize}
+  \setlength{\itemsep}{3pt}
+  \item Female peers rate girls \emph{higher}
+  \item Consistent across all domains
+\end{itemize}
+\vspace{0.4cm}
+\footnotesize
+\textit{The skills girls doubt in themselves are the very ones their peers reward.}
+\end{column}
+\begin{column}{0.63\textwidth}
+\vspace{0.1cm}
 \centering
-\includegraphics[width=0.85\textwidth]{figures/PB_self_peer_combined.png}
-\vspace{0.2cm}
-\scriptsize
-Left: Female coefficient ($\beta_1$) in self-evaluation. Right: Female$\times$Female interaction ($\beta_1 + \beta_3$) in peer evaluation. Pentabilities CO, classroom FE, z-scored outcomes.
+\includegraphics[width=\textwidth]{figures/PB_self_peer_combined.png}
+\end{column}
+\end{columns}
 \end{frame}
 % ---- 30: Robustness ----
 \begin{frame}{Robustness: Three checks}
@@ -1247,15 +1213,11 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \end{itemize}
 \hyperlink{slide:ff_premium}{\beamerreturnbutton{Back}}
 \end{frame}
-% ---- Self-Evaluation Full Tables ----
-\begin{frame}{Self-Evaluation: Full Tables}
-\label{slide:self_full}
-\input{tables/self compact}
-\end{frame}
 % ---- Peer-Evaluation Full Tables ----
 \begin{frame}{Peer-Evaluation: Full Tables}
 \label{slide:peer_full}
 \input{tables/peer compact}
+\hyperlink{slide:ff_premium}{\beamerreturnbutton{Back}}
 \end{frame}
 % ---- EO Robustness ----
 \begin{frame}{Robustness: EO Score}

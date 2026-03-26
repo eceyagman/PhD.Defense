@@ -1,17 +1,26 @@
-
-\begin{tabular}{lccccc}
+\begin{threeparttable}
+\begin{tabular}{l*{5}{c}}
 \toprule
- & Auton. & Coop. & Resp. & Emot. & Think. \\
+ & (1) & (2) & (3) & (4) & (5) \\
+ & Autonomy & Cooperation & Responsibility & Emotion & Thinking \\
 \midrule
-Female Student ($\beta_1$) & -0.086 & -0.112** & -0.019 & -0.044 & -0.110 \\
- & (0.065) & (0.056) & (0.056) & (0.059) & (0.069) \\
-Female Peer ($\beta_2$) & -0.207*** & -0.293*** & -0.156*** & -0.231*** & -0.205*** \\
- & (0.064) & (0.053) & (0.055) & (0.056) & (0.067) \\
-Fem.Stu $\times$ Fem.Peer ($\bm{\beta_3}$) & 0.454*** & 0.406*** & 0.232*** & 0.357*** & 0.415*** \\
+{Female Student ($\beta_1$)} & $-$0.086 & $-$0.112\sym{**} & $-$0.019 & $-$0.044 & $-$0.110 \\
+ & (0.065) & (0.056) & (0.056) & (0.059) & (0.069) \\[2pt]
+{Female Peer ($\beta_2$)} & $-$0.207\sym{***} & $-$0.293\sym{***} & $-$0.156\sym{***} & $-$0.231\sym{***} & $-$0.205\sym{***} \\
+ & (0.064) & (0.053) & (0.055) & (0.056) & (0.067) \\[2pt]
+{Fem.Stu $\times$ Fem.Peer ($\bm{\beta_3}$)} & 0.454\sym{***} & 0.406\sym{***} & 0.232\sym{***} & 0.357\sym{***} & 0.415\sym{***} \\
  & (0.084) & (0.068) & (0.070) & (0.076) & (0.081) \\
 \midrule
-$\beta_1 + \beta_3$ & 0.368*** & 0.294*** & 0.213*** & 0.312*** & 0.305*** \\
+\rowcolor{HopBlue!8}
+{$\bm{\beta_1 + \beta_3}$} & \textbf{0.368}\sym{***} & \textbf{0.294}\sym{***} & \textbf{0.213}\sym{***} & \textbf{0.312}\sym{***} & \textbf{0.305}\sym{***} \\
 \midrule
 Observations & 2,006 & 2,842 & 2,762 & 2,239 & 2,065 \\
+Classroom FE & Yes & Yes & Yes & Yes & Yes \\
+{360\textsuperscript{o} score controls} & Yes & Yes & Yes & Yes & Yes \\
 \bottomrule
 \end{tabular}
+\begin{tablenotes}[flushleft]
+\scriptsize
+\item \textit{Notes:} Standard errors clustered at student level in parentheses. Dependent variable is peer-assigned z-score. Controls include self and teacher scores for both student and peer, plus background characteristics. \sym{*}$p<0.10$, \sym{**}$p<0.05$, \sym{***}$p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
