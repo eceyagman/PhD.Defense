@@ -605,68 +605,89 @@ y_{ijs} &= \alpha
 \item \fadecolor{2}{\textbf{Controls:} self-score, teacher-score, background characteristics}
 \end{itemize}
 \end{frame}
-% ---- 27: Self-evaluation results (Pentabilities) ----
+% ---- 27: Self-evaluation results ----
 \begin{frame}{Females underrate themselves}
-\centering
-\includegraphics[width=0.6\textwidth]{figures/PB_self_main.png}
-\vspace{0.2cm}
 \scriptsize
-Female coefficient ($\beta_1$) across 5 SES domains, Pentabilities classroom observations. Classroom FE, z-scored outcomes.
-\vspace{0.1cm}
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north east, inner sep=0pt]
+    at ([xshift=-0.3cm, yshift=-2.6cm]current page.north east)
+    {\resizebox{0.55\textwidth}{!}{\input{tables/self_main}}};
+\end{tikzpicture}
+\begin{minipage}{0.42\textwidth}
+\begin{itemize}
+  \setlength{\itemsep}{4pt}
+  \item $\bm{\beta_1}$: female self-rating gap, conditional on teacher and peer scores
+  \item Largest in Emotional Management ($-$0.30 SD) and Thinking ($-$0.24 SD)
+  \item Stereotype-congruent domains
+  \item Teacher and peer scores confirm girls are equally skilled
+\end{itemize}
+\end{minipage}
+\vfill
 \hyperlink{slide:self_full}{\beamergotobutton{Full Tables}}
 \end{frame}
-% ---- 28: Peer evaluation results (Pentabilities) ----
+% ---- 28: Peer-evaluation results + summary ----
 \begin{frame}{The Female-Female Premium}
 \label{slide:ff_premium}
-\centering
-\includegraphics[width=0.6\textwidth]{figures/PB_peer_main_FF.png}
-\vspace{0.2cm}
 \scriptsize
-$\beta_3$ (StuFem $\times$ PeerFem) across 5 SES domains, Pentabilities CO. $N \approx$ 30,000+ peer evaluations, $\sim$911 students, 88 classrooms.
-\vspace{0.1cm}
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north east, inner sep=0pt]
+    at ([xshift=-0.3cm, yshift=-2.6cm]current page.north east)
+    {\resizebox{0.55\textwidth}{!}{\input{tables/peer_main}}};
+\end{tikzpicture}
+\begin{minipage}{0.42\textwidth}
+\begin{itemize}
+  \setlength{\itemsep}{4pt}
+  \item $\beta_1 \approx 0$: male peers are gender-neutral
+  \item $\beta_2 < 0$: female peers are strict toward males
+  \item $\bm{\beta_3}$ = +0.23 to +0.45 SD: the female-female premium
+  \item Net FF effect ($\beta_1 + \beta_3$): +0.21 to +0.37 SD above male-male baseline
+\end{itemize}
+\vspace{0.2cm}
+\textit{Driven by who is doing the rating, not who is being rated}
+\end{minipage}
+\vfill
 \hyperlink{slide:peer_full}{\beamergotobutton{Full Tables}}
 \hyperlink{slide:gender_int}{\beamergotobutton{Net Effect}}
 \end{frame}
-% ---- 29: Interpreting the Premium ----
-\begin{frame}{Interpreting the Premium}
-\small
-\textbf{Three clear patterns:}
-\vspace{0.3cm}
-\begin{enumerate}
-\item \fadecolor{1}{\textbf{Male peers are gender-neutral:} $\beta_1 \approx 0$ in all domains}
+% ---- 29: Combined coefplot ----
+\begin{frame}{Self-underrating and FF premium across domains}
+\centering
+\includegraphics[width=0.85\textwidth]{figures/PB_self_peer_combined.png}
 \vspace{0.2cm}
-\item \fadecolor{2}{\textbf{Female peers are strict toward males:} $\beta_2$ is negative and significant in all domains}
-\vspace{0.2cm}
-\item \fadecolor{3}{\textbf{Female-female premium:} $\beta_3$ = +0.24 to +0.43 SD across all domains}
-\end{enumerate}
-\vspace{0.3cm}
-\onslide<3->{%
-\textbf{Net female-female effect ($\beta_1 + \beta_3$):} +0.21 to +0.37 SD above the male-male baseline
-\vspace{0.2cm}
-\textit{Driven by who is doing the rating, not who is being rated}
-}
+\scriptsize
+Left: Female coefficient ($\beta_1$) in self-evaluation. Right: Female$\times$Female interaction ($\beta_1 + \beta_3$) in peer evaluation. Pentabilities CO, classroom FE, z-scored outcomes.
 \end{frame}
 % ---- 30: Robustness ----
-\begin{frame}{Robustness: FA and BESSI}
+\begin{frame}{Robustness: Three checks}
+\scriptsize
 \begin{columns}[T]
-\begin{column}{0.48\textwidth}
+\begin{column}{0.32\textwidth}
 \centering
-\textcolor{HopBlue}{\textbf{Lab-in-the-field (FA)}}\\
+\textcolor{HopBlue}{\textbf{1. EO Score}}\\
+\vspace{0.1cm}
+\includegraphics[width=\textwidth]{figures/PB_self_peer_EO_combined.png}
+\vspace{0.1cm}
+Replace teacher/peer controls with external observer score. FF premium: 20--40\% of a SD.
+\end{column}
+\begin{column}{0.32\textwidth}
+\centering
+\textcolor{HopBlue}{\textbf{2. Lab-in-the-field (FA)}}\\
 \vspace{0.1cm}
 \includegraphics[width=\textwidth]{figures/PB_self_peer_FA_combined.png}
+\vspace{0.1cm}
+Random groups, controlled setting. FF premium: 0.12--0.27 SD.
 \end{column}
-\begin{column}{0.48\textwidth}
+\begin{column}{0.32\textwidth}
 \centering
-\textcolor{HopBlue}{\textbf{BESSI survey}}\\
+\textcolor{HopBlue}{\textbf{3. BESSI survey}}\\
 \vspace{0.1cm}
 \includegraphics[width=\textwidth]{figures/BESSI_self_peer_combined.png}
+\vspace{0.1cm}
+Validated 360$^{\circ}$ instrument, T + C schools. Both findings replicate.
 \end{column}
 \end{columns}
-\vspace{0.3cm}
-\scriptsize
-FA: random group assignment, eliminates friendship confound. BESSI: validated 360$^{\circ}$ instrument, T + C schools. Both replicate the self-underrating and the FF premium.
-\vspace{0.1cm}
-\hyperlink{slide:rob_eo}{\beamergotobutton{EO}} \quad
+\vfill
+\hyperlink{slide:rob_eo}{\beamergotobutton{EO tables}} \quad
 \hyperlink{slide:rob_fa}{\beamergotobutton{FA tables}} \quad
 \hyperlink{slide:rob_bessi}{\beamergotobutton{BESSI tables}}
 \end{frame}
