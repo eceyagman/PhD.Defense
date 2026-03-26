@@ -294,7 +294,7 @@ Measurement, Gender Dynamics, and Social Identity}
 \end{frame}
 % ---- 9b: Standardized Activity (FA) ----
 \begin{frame}{Standardized behavioral task (Final Activity)}
-\small
+\footnotesize
 \begin{columns}[T]
 \begin{column}{0.55\textwidth}
 \textbf{One-hour group task} conducted outside normal class hours (May--June 2023)
@@ -309,7 +309,7 @@ Measurement, Gender Dynamics, and Social Identity}
 \textcolor{HopBlue}{\textbf{Why it matters:}}
 \begin{itemize}
   \item Random groups $\rightarrow$ eliminates friendship confound
-  \item T + C students $\rightarrow$ enables causal comparisons (Ch.\ 3)
+  \item T + C students $\rightarrow$ enables causal comparisons 
   \item Behavior-anchored $\rightarrow$ complements survey-based BESSI
 \end{itemize}
 \end{column}
@@ -465,54 +465,55 @@ y_{igst} = \alpha + \beta T_{igs} + \gamma y_{igs0}
 {\large \textbf{1. Impacts on Classroom Environment}}\\
 {\color{HopBlue}\rule{0.4\linewidth}{2pt}}
 \end{frame}
-% ---- Student perceptions ----
+% ---- Slide 14: Student perceptions ----
 \begin{frame}{Students perceive improvements in teaching practices}\label{slide:perception}
 \scriptsize
+\vspace{0.8cm}
 % ---- Table floated top-right ----
 \begin{tikzpicture}[remember picture, overlay]
   \node[anchor=north east, inner sep=0pt]
     at ([xshift=-0.9cm, yshift=-2.8cm]current page.north east)
-    {\resizebox{0.42\textwidth}{!}{\input{tables/perception}}};
+    {\input{tables/perception}};
 \end{tikzpicture}
 % ---- Text ----
 \begin{minipage}{0.45\textwidth}
-\small
-\textbf{Student Perception of Teacher Practices:}\\
-Factor measure based on 22-item student survey
+\textbf{22-item student survey} on classroom experiences
 \vspace{0.2cm}
-\footnotesize
-\begin{enumerate}
+\begin{itemize}
   \setlength{\itemsep}{2pt}
   \item Individualized attention\\
-    \textit{\color{gray}``My teacher makes me feel they care about me''}
+    \textit{\color{gray}``Makes me feel they care about me''}
   \item Whole-classroom effort\\
     \textit{\color{gray}``Encourages students to work independently''}
   \item Instructional clarity\\
     \textit{\color{gray}``Explains objectives at the start of class''}
-  \item Role of peer interactions\\
+  \item Peer interactions\\
     \textit{\color{gray}``Feedback from classmates helps me improve''}
-\end{enumerate}
-\end{minipage}
-\vfill
-\footnotesize
-\textcolor{HopBlue}{\textbf{$\Rightarrow$}} Treated students rate their teachers \textbf{$\uparrow$ 0.20 SD\sym{**}} higher (standardized index).
-\vspace{0.2cm}
+\end{itemize}
+\vspace{1cm}
 \hyperlink{perception}{\beamergotobutton{Survey items}}
+\end{minipage}
 \end{frame}
-% ----
-% ---- Teacher time use ----
+% ---- Slide 15: Teacher time use ----
 \begin{frame}{Teachers reallocate classroom time}
 \input{tables/tch_timeuse}
 \vspace{0.2cm}
 \scriptsize
 \begin{itemize}
-\item \textbf{Leading small groups} drops by $\sim$94 min/week ($-$43\% of control mean)
+\item \textbf{Leading small groups} drops by $\sim$1.5 h/week ($-$43\% of control mean)
 \item \textbf{Disciplinary issues} drops by $\sim$35 min/week ($-$42\% of control mean)
-\item No significant change in whole-class instruction, individual work, or group facilitation
 \end{itemize}
 \end{frame}
-% ----
-% ---- Student outcomes ----
+
+
+\begin{frame}[plain]
+\vspace{2.5cm}
+{\large \textbf{2. \& 3. Impacts on Student Outcomes}}\\
+{\color{HopBlue}\rule{0.4\linewidth}{2pt}}
+\end{frame}
+
+
+% ---- Slide 16: Student outcomes ----
 \begin{frame}{Limited average effects on student outcomes}
 \small
 \textcolor{HopBlue}{\textbf{Socioemotional skills}}
@@ -527,15 +528,11 @@ Factor measure based on 22-item student survey
 \item GPA: null
 \item Attendance: null
 \end{itemize}
-\vspace{0.2cm}
-\textcolor{HopBlue}{\textbf{Well-being and social relationships}}
-\begin{itemize}
-\item Student well-being, grit, growth mindset: null
-\end{itemize}
 \vspace{0.3cm}
-\textcolor{HopBlue}{\textbf{$\Rightarrow$}} Average null effects mask substantial heterogeneity. Updated coauthor paper finds improvements concentrated among (i) low socio-economic background and (ii) weaker baseline socioemotional skills.
+\textcolor{HopBlue}{\textbf{$\Rightarrow$}} \textbf{First margin:} the program reshapes classroom processes. Skill-level effects likely require longer exposure. \\
+\vspace{0.1cm}
+\textcolor{HopBlue}{\textbf{$\Rightarrow$}} \textbf{Updated WP:} significant distributional effects by socioeconomic background and baseline skills, ATE masks significant distributional patterns.
 \end{frame}
-% ----
 % ---- Ch.1 takeaway and bridge to Ch.2 ----
 \begin{frame}{Chapter 1: Takeaways}
 \small
@@ -544,7 +541,7 @@ Factor measure based on 22-item student survey
 \vspace{0.2cm}
 \item \fadecolor{2}{\textbf{No average effects on student outcomes.} Socioemotional skills, GPA, and attendance show no detectable impacts at six months.}
 \vspace{0.2cm}
-\item \fadecolor{3}{\textbf{The evaluative environment is what changes first.} The program introduces cooperative group work, behavior-anchored rubrics, and repeated multi-rater assessment. Students evaluate each other systematically, using shared criteria.}
+\item \fadecolor{3}{\textbf{The  environment is what changes first.} The program introduces cooperative group work, behavior-anchored rubrics, and repeated multi-rater assessment. Students evaluate each other systematically, using shared criteria.}
 \end{enumerate}
 \vspace{0.5cm}
 \onslide<4->{%
@@ -797,10 +794,7 @@ y_{ijs} &= \alpha
 \vspace{0.3cm}
 \textit{Can the program --- designed for skill-building --- reshape these patterns?}
 \end{frame}
-% ---- Bridge 2 (slide 29) ----
-\againframe<3>{thesismap}
-\addtocounter{framenumber}{-1}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CHAPTER 3: IN-GROUP FAVORITISM  (slides 36--45)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Chapter 3}
@@ -809,13 +803,18 @@ y_{ijs} &= \alpha
 {\LARGE \textbf{Chapter 3}}\\
 {\color{HopBlue}\rule{0.4\linewidth}{2pt}}
 \end{frame}
+
+% ---- Bridge 2 (slide 29) ----
+\againframe<3>{thesismap}
+\addtocounter{framenumber}{-1}
+% 
 % ---- 37: Research Questions + Design ----
 \begin{frame}{Research Questions and Design}
 \small
 \textbf{Two questions:}
 \begin{enumerate}
     \item Do adolescents display own-group favoritism in peer assessments of SES? (Gender + Nationality)
-    \item Can the Pentabilities program attenuate these in-group biases?
+    \item Can an SEL program attenuate these in-group biases?
 \end{enumerate}
 \vspace{0.3cm}
 \textbf{Design advantage over Chapter 2:}
