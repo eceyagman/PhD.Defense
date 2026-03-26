@@ -108,6 +108,7 @@
 \bibliographystyle{apacite}
 \usepackage{totcount}
 \regtotcounter{framenumber}
+\newcounter{mainframecount}
 % ============================================================
 % TITLE INFO
 % ============================================================
@@ -129,7 +130,7 @@ Measurement, Gender Dynamics, and Social Identity}
   \leavevmode%
   \hfill
   \usebeamerfont{page number in head/foot}%
-  \insertframenumber{} / \total{framenumber}\hspace*{0.5cm}%
+  \insertframenumber{} / \themainframecount\hspace*{0.5cm}%
   \vskip4pt%
 }
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -360,7 +361,7 @@ Measurement, Gender Dynamics, and Social Identity}
 {\color{HopBlue}\rule{0.4\linewidth}{2pt}}
 \end{frame}
 % ---- 12: Chapter 1 framing ----
-\begin{frame}{RCT Average treatment effects}\label{slide:ate}
+\begin{frame}{RCT Impact Evaluation}\label{slide:ate}
 \small
 \vspace{0.2cm}
 \textbf{Question:} Does embedding SEL into daily instruction reshape what happens in the classroom and improve student outcomes? \\
@@ -460,9 +461,9 @@ y_{igst} = \alpha + \beta T_{igs} + \gamma y_{igs0}
     \textit{\color{gray}``Feedback from classmates helps me improve''}
 \end{itemize}
 \end{minipage}
-\vspace{0.4cm}
-\textcolor{HopBlue}{\textbf{$\Rightarrow$}} Treated students rate their teachers \textbf{0.20 SD} higher.
 \vfill
+\textcolor{HopBlue}{\textbf{$\Rightarrow$}} Treated students rate their teachers \textbf{0.20 SD} higher.
+\vspace{0.2cm}
 \hyperlink{perception}{\beamergotobutton{Survey items}}
 \end{frame}
 % ----
@@ -625,12 +626,11 @@ y_{ijs} &= \alpha
 \begin{itemize}
 \item[$\Rightarrow$] $\beta_1 \approx 0$: \textbf{male peers} are gender-neutral
 \item[$\Rightarrow$] $\beta_2 < 0$: \textbf{female peers} are strict toward males across all domains
-\item[$\Rightarrow$] $\bm{\beta_1 + \beta_3}$ female peer rating a female student (vs.\ male student): \textcolor{HopBlue}{\textbf{FF premium $\uparrow$ +0.21 to +0.37 SD}}
+\item[$\Rightarrow$] $\bm{\beta_1 + \beta_3}$ female peer rating a female student (vs.\ male student): \\ \textcolor{HopBlue}{\textbf{FF premium $\uparrow$ +0.21 to +0.37 SD}}
 \end{itemize}
 \vfill
 \scriptsize
 \hyperlink{slide:peer_full}{\beamergotobutton{Full Tables}}
-\hfill
 \hyperlink{slide:gender_int}{\beamergotobutton{Net Effect}}
 \hfill\mbox{}
 \end{frame}
@@ -639,23 +639,11 @@ y_{ijs} &= \alpha
 \begin{columns}[T]
 \begin{column}{0.35\textwidth}
 \vspace{0.3cm}
-\small
-\textcolor{HopBlue}{\textbf{Self-evaluation ($\bm{\beta_1}$):}}
 \begin{itemize}
   \setlength{\itemsep}{3pt}
-  \item Girls rate themselves \emph{lower}
-  \item Largest in Emotion and Thinking
+  \item Female students underrate their skills, especially in EM and TA
+  \item At the same time, female peers rate girls $\uparrow$ across all domains
 \end{itemize}
-\vspace{0.3cm}
-\textcolor{HopBlue}{\textbf{Peer-evaluation ($\bm{\beta_1 + \beta_3}$):}}
-\begin{itemize}
-  \setlength{\itemsep}{3pt}
-  \item Female peers rate girls \emph{higher}
-  \item Consistent across all domains
-\end{itemize}
-\vspace{0.4cm}
-\footnotesize
-\textit{The skills girls doubt in themselves are the very ones their peers reward.}
 \end{column}
 \begin{column}{0.63\textwidth}
 \vspace{0.1cm}
@@ -664,67 +652,68 @@ y_{ijs} &= \alpha
 \end{column}
 \end{columns}
 \end{frame}
-% ---- 30: Robustness ----
-\begin{frame}{Robustness: Three checks}
-\scriptsize
-\begin{columns}[T]
-\begin{column}{0.32\textwidth}
-\centering
-\textcolor{HopBlue}{\textbf{1. EO Score}}\\
-\vspace{0.1cm}
-\includegraphics[width=\textwidth]{figures/PB_self_peer_EO_combined.png}
-\vspace{0.1cm}
-Replace teacher/peer controls with external observer score. FF premium: 20--40\% of a SD.
-\end{column}
-\begin{column}{0.32\textwidth}
-\centering
-\textcolor{HopBlue}{\textbf{2. Lab-in-the-field (FA)}}\\
-\vspace{0.1cm}
-\includegraphics[width=\textwidth]{figures/PB_self_peer_FA_combined.png}
-\vspace{0.1cm}
-Random groups, controlled setting. FF premium: 0.12--0.27 SD.
-\end{column}
-\begin{column}{0.32\textwidth}
-\centering
-\textcolor{HopBlue}{\textbf{3. BESSI survey}}\\
-\vspace{0.1cm}
-\includegraphics[width=\textwidth]{figures/BESSI_self_peer_combined.png}
-\vspace{0.1cm}
-Validated 360$^{\circ}$ instrument, T + C schools. Both findings replicate.
-\end{column}
-\end{columns}
-\vfill
-\hyperlink{slide:rob_eo}{\beamergotobutton{EO tables}} \quad
-\hyperlink{slide:rob_fa}{\beamergotobutton{FA tables}} \quad
-\hyperlink{slide:rob_bessi}{\beamergotobutton{BESSI tables}}
-\end{frame}
-% ---- 31: The gap widens ----
-\begin{frame}{The gap widens: self-perception vs.\ peer recognition}
+% ---- 30: Robustness overview ----
+\begin{frame}{Robustness}
 \small
-\begin{columns}[T]
-\begin{column}{0.48\textwidth}
-\onslide<1->{%
-\textbf{\textcolor{HopBlue}{Self-perception:}}
+\textbf{Do the findings replicate across evaluators, settings, and measurement methods?}
+\vspace{0.4cm}
+\begin{enumerate}
+  \setlength{\itemsep}{12pt}
+  \item \textcolor{HopBlue}{\textbf{External Observer (EO) score:}} Replace teacher/peer score controls with independent observer ratings (in-classroom)
+  \item \textcolor{HopBlue}{\textbf{Lab-in-the-field activity (FA):}} Standardized task, randomly assigned groups, controlled setting outside the classroom
+  \item \textcolor{HopBlue}{\textbf{BESSI survey:}} Validated 360\textsuperscript{o} instrument at endline, measures functional capacities (i.e., how well one can perform key behaviors)
+\end{enumerate}
+\end{frame}
+% ---- 31: Robustness 1 - EO ----
+\begin{frame}{1. External Observer Score}
+\centering
+\includegraphics[width=0.75\textwidth]{figures/PB_self_peer_EO_combined.png}
+\vspace{0.2cm}
+\footnotesize
 \begin{itemize}
-\item Girls rate themselves lower in Emotional Management ($-$0.30 to $-$0.47 SD) and Thinking ($-$0.24 SD)
-\item Concentrated in stereotype-congruent domains \citep{Exley2022-tt}
+\item[$\Rightarrow$] \textbf{Self-underrating:} still negative, no longer significant (smaller $N$)
+\item[$\Rightarrow$] \textbf{FF premium:} robust, \textcolor{HopBlue}{\textbf{$\uparrow$ 20--40\% SD}}
 \end{itemize}
-}
-\end{column}
-\begin{column}{0.48\textwidth}
-\onslide<2->{%
-\textbf{\textcolor{HopBlue}{Peer recognition:}}
+\end{frame}
+% ---- 32: Robustness 2 - FA ----
+\begin{frame}{2. Lab-in-the-Field Activity (FA)}
+\centering
+\includegraphics[width=0.75\textwidth]{figures/PB_self_peer_FA_combined.png}
+\vspace{0.2cm}
+\footnotesize
 \begin{itemize}
-\item Female peers rate female students \emph{higher} across all domains (+0.21 to +0.37 SD)
-\item The skills girls doubt most are the ones peers recognize most
+\item[$\Rightarrow$] \textbf{Self:} EM and Thinking negative and significant
+\item[$\Rightarrow$] \textbf{FF premium:} \textcolor{HopBlue}{\textbf{+0.12 to +0.27 SD}}
 \end{itemize}
-}
-\end{column}
-\end{columns}
-\vspace{0.5cm}
-\onslide<2->{%
-\textit{Girls recognize and endorse others' strengths while discounting their own}
-}
+\end{frame}
+% ---- 33: Robustness 3 - BESSI ----
+\begin{frame}{3. BESSI Survey}
+\centering
+\includegraphics[width=0.75\textwidth]{figures/BESSI_self_peer_combined.png}
+\vspace{0.2cm}
+\footnotesize
+\begin{itemize}
+\item[$\Rightarrow$] Both self-underrating and FF premium \textcolor{HopBlue}{\textbf{replicate}}
+\end{itemize}
+\end{frame}
+% ---- 34: Robustness summary - all 4 ----
+\begin{frame}{Robustness: Key Takeaways}
+\centering
+\setlength{\fboxsep}{0.5pt}
+\begin{tabular}{cc}
+  \fcolorbox{MidnightBlue}{white}{%
+    \includegraphics[width=0.42\textwidth]{figures/PB_self_peer_combined.png}} &
+  \fcolorbox{Orange}{white}{%
+    \includegraphics[width=0.42\textwidth]{figures/PB_self_peer_EO_combined.png}} \\
+  \fcolorbox{Orange}{white}{%
+    \includegraphics[width=0.42\textwidth]{figures/PB_self_peer_FA_combined.png}} &
+  \fcolorbox{Orange}{white}{%
+    \includegraphics[width=0.42\textwidth]{figures/BESSI_self_peer_combined.png}} \\
+\end{tabular}
+\scriptsize
+\begin{itemize}
+    \item Months of classroom observation $\Leftrightarrow$ Brief survey in a lab setting $\Leftrightarrow$ Conventional validated survey
+\end{itemize}
 \end{frame}
 % ---- 33: Policy Relevance ----
 \begin{frame}{Policy Relevance}
@@ -1093,6 +1082,7 @@ Universitat Aut\`onoma de Barcelona
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APPENDIX / BACKUP SLIDES
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{mainframecount}{\value{framenumber}}
 \appendix
 \begin{frame}[allowframebreaks]{References}
 \def\newblock{}
