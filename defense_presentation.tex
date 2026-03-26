@@ -607,45 +607,54 @@ y_{ijs} &= \alpha
 \end{frame}
 % ---- 27: Self-evaluation results ----
 \begin{frame}{Females underrate themselves}
-\scriptsize
-\begin{tikzpicture}[remember picture, overlay]
-  \node[anchor=north east, inner sep=0pt]
-    at ([xshift=-0.3cm, yshift=-2.6cm]current page.north east)
-    {\resizebox{0.55\textwidth}{!}{\input{tables/self_main}}};
-\end{tikzpicture}
-\begin{minipage}{0.42\textwidth}
+\small
+\begin{columns}[T]
+\begin{column}{0.38\textwidth}
+\vspace{0.2cm}
 \begin{itemize}
-  \setlength{\itemsep}{4pt}
+  \setlength{\itemsep}{6pt}
   \item $\bm{\beta_1}$: female self-rating gap, conditional on teacher and peer scores
   \item Largest in Emotional Management ($-$0.30 SD) and Thinking ($-$0.24 SD)
   \item Stereotype-congruent domains
   \item Teacher and peer scores confirm girls are equally skilled
 \end{itemize}
-\end{minipage}
+\end{column}
+\begin{column}{0.60\textwidth}
+\vspace{0.1cm}
+\centering
+\resizebox{\textwidth}{!}{\input{tables/self_main}}
+\end{column}
+\end{columns}
 \vfill
+\scriptsize
 \hyperlink{slide:self_full}{\beamergotobutton{Full Tables}}
 \end{frame}
 % ---- 28: Peer-evaluation results + summary ----
 \begin{frame}{The Female-Female Premium}
 \label{slide:ff_premium}
-\scriptsize
-\begin{tikzpicture}[remember picture, overlay]
-  \node[anchor=north east, inner sep=0pt]
-    at ([xshift=-0.3cm, yshift=-2.6cm]current page.north east)
-    {\resizebox{0.55\textwidth}{!}{\input{tables/peer_main}}};
-\end{tikzpicture}
-\begin{minipage}{0.42\textwidth}
-\begin{itemize}
-  \setlength{\itemsep}{4pt}
-  \item $\beta_1 \approx 0$: male peers are gender-neutral
-  \item $\beta_2 < 0$: female peers are strict toward males
-  \item $\bm{\beta_3}$ = +0.23 to +0.45 SD: the female-female premium
-  \item Net FF effect ($\beta_1 + \beta_3$): +0.21 to +0.37 SD above male-male baseline
-\end{itemize}
+\small
+\begin{columns}[T]
+\begin{column}{0.38\textwidth}
 \vspace{0.2cm}
+\begin{itemize}
+  \setlength{\itemsep}{6pt}
+  \item $\beta_1 \approx 0$: male peers are gender-neutral
+  \item $\beta_2 < 0$: female peers strict toward males
+  \item $\bm{\beta_3}$ = +0.23 to +0.45 SD: the FF premium
+  \item Net effect ($\beta_1 + \beta_3$): +0.21 to +0.37 SD
+\end{itemize}
+\vspace{0.3cm}
+\footnotesize
 \textit{Driven by who is doing the rating, not who is being rated}
-\end{minipage}
+\end{column}
+\begin{column}{0.60\textwidth}
+\vspace{0.1cm}
+\centering
+\resizebox{\textwidth}{!}{\input{tables/peer_main}}
+\end{column}
+\end{columns}
 \vfill
+\scriptsize
 \hyperlink{slide:peer_full}{\beamergotobutton{Full Tables}}
 \hyperlink{slide:gender_int}{\beamergotobutton{Net Effect}}
 \end{frame}
