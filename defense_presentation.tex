@@ -108,7 +108,6 @@
 \bibliographystyle{apacite}
 \usepackage{totcount}
 \regtotcounter{framenumber}
-\newcounter{mainframecount}
 % ============================================================
 % TITLE INFO
 % ============================================================
@@ -130,7 +129,7 @@ Measurement, Gender Dynamics, and Social Identity}
   \leavevmode%
   \hfill
   \usebeamerfont{page number in head/foot}%
-  \insertframenumber{} / \themainframecount\hspace*{0.5cm}%
+  \insertframenumber{} / \inserttotalframenumber\hspace*{0.5cm}%
   \vskip4pt%
 }
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1082,7 +1081,6 @@ Universitat Aut\`onoma de Barcelona
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APPENDIX / BACKUP SLIDES
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setcounter{mainframecount}{\value{framenumber}}
 \appendix
 \begin{frame}[allowframebreaks]{References}
 \def\newblock{}
