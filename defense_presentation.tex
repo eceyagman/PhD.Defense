@@ -101,6 +101,7 @@
 \usepackage{siunitx}
 \usepackage{wrapfig}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{bm}
 \newcommand{\sym}[1]{\ifmmode^{#1}\else$^{#1}$\fi}
 \newcommand{\MyNumthree}[1]{\num[round-mode=places,round-precision=3]{#1}}
 \newcommand{\MyNumtwo}[1]{\num[round-mode=places,round-precision=2]{#1}}
@@ -533,16 +534,16 @@ y_{igst} = \alpha + \beta T_{igs} + \gamma y_{igs0}
 % ---- 24: Two Research Questions ----
 \begin{frame}{Two Research Questions}
 \small
-\textbf{Question 1 --- Self-evaluation:}\\
-Do female students rate their own SES differently from male students, conditional on ability?
+\textbf{Question 1. Self-evaluation:}\\
+Do female students rate their own SES differently from male students, conditional on ability? \\
 \vspace{0.3cm}
-\textbf{Question 2 --- Peer evaluation:}\\
-Is there a systematic gender pattern in how peers evaluate each other's SES?
+\textbf{Question 2. Peer evaluation:}\\
+Is there a systematic gender pattern in how peers evaluate each other's SES? \\
 \vspace{0.5cm}
 \textbf{Why this matters:}
 \begin{itemize}
-    \item Evaluations are not just measures of skill --- they shape beliefs, motivation, and the feedback environment
-    \item Gendered patterns that form in adolescence can influence later educational and labor market choices
+    \item Evaluations are not just measures of skill; they shape beliefs, motivation, and the feedback environment
+    \item Early gaps can shape educational choices and career sorting $\rightarrow$ L market rewards self-promotion
 \end{itemize}
 \end{frame}
 % ---- 25: Why Adolescence? ----
@@ -551,7 +552,7 @@ Is there a systematic gender pattern in how peers evaluate each other's SES?
 \begin{itemize}
     \item Ages 12--16: high neuroplasticity, self-beliefs and aspirations are particularly malleable \citep{Steinberg2014-pe}
     \item \textbf{Self-identity formation:} Who am I? What am I good at? Where do I fit in?
-    \item \textbf{Peer-influence peaks:} Students look to classmates for cues --- who is good at what?
+    \item \textbf{Peer-influence peaks:} Students look to classmates for cues; who is good at what?
     \item Gendered norms around ``girls do well'' vs.\ ``boys do well'' solidify during these years
 \end{itemize}
 \vspace{0.5cm}
@@ -563,31 +564,51 @@ Is there a systematic gender pattern in how peers evaluate each other's SES?
 \textcolor{HopBlue}{\textbf{(I) Self-assigned scores}}
 \vspace{-0.2cm}
 \begin{equation*}
-y_{is} = \alpha + \boldsymbol{\beta_1} \mathbf{StuFem}_i + \beta_2 \, \text{Teacher}_{is} + \beta_3 \, \text{Peer}_{is} + \beta_4 \mathbf{X}'_{is} + \gamma + \varepsilon_{is}
+y_{is} = \alpha + \bm{\beta_1} \mathbf{StuFem}_i + \beta_2 \, \text{Teacher}_{is} + \beta_3 \, \text{Peer}_{is} + \beta_4 \mathbf{X}'_{is} + \gamma + \varepsilon_{is}
 \end{equation*}
 \vspace{-0.3cm}
 \begin{itemize}
 \item \textbf{Teacher$_{is}$} controls for observed variation in student performance, not underlying ability \textit{per se}
 \item \textbf{Peer$_{is}$} controls for the perception of peers
-\item \textbf{StuFem$_i$}: \textit{How different do girls rate themselves from boys, given that teachers and peers see them as equally skilled?}
+\item \textbf{$\mathbf{X}'_{is}$} student birthplace, caregivers' birthplace, and caregivers' education levels
+\item {$\gamma$: Classroom FE. $\varepsilon_{is}$ SEs clustered at student level}
+\item $\bm{\beta_1}$: \textit{How different do girls rate themselves from boys, given that teachers and peers see them as equally skilled?}
 \end{itemize}
 \vspace{0.2cm}
-\textcolor{HopBlue}{\textbf{(II) Peer-assigned scores}}
+\alt<2->{\textcolor{HopBlue}{\textbf{(II) Peer-assigned scores}}}{\textcolor{fadegray}{\textbf{(II) Peer-assigned scores}}}
 \vspace{-0.2cm}
-\begin{equation*}
-y_{ijs} = \alpha + \beta_1 \, \text{StuFem}_{i} + \beta_2 \, \text{PeerFem}_{j} + \boldsymbol{\beta_3} \, (\mathbf{StuFem \times PeerFem})_{ij} + \text{Controls} + \gamma + \varepsilon_{ijs}
-\end{equation*}
+\alt<2->{%
+\begin{align*}
+y_{ijs} &= \alpha
+    + \beta_1 \, \text{StuFem}_{ij}
+    + \beta_2 \, \text{PeerFem}_{ij}
+    + \bm{\beta_3} \, (\mathbf{StuFem \times PeerFem})_{ij} \\
+    &\quad + \textit{Controls}
+    + \gamma
+    + \varepsilon_{ijs}
+\end{align*}
+}{%
+{\color{fadegray}
+\begin{align*}
+y_{ijs} &= \alpha
+    + \beta_1 \, \text{StuFem}_{ij}
+    + \beta_2 \, \text{PeerFem}_{ij}
+    + \bm{\beta_3} \, (\mathbf{StuFem \times PeerFem})_{ij} \\
+    &\quad + \textit{Controls}
+    + \gamma
+    + \varepsilon_{ijs}
+\end{align*}
+}}
 \vspace{-0.3cm}
 \begin{itemize}
-\item Controls: Self$_{is}$, Self$_{js}$, Teacher$_{is}$, Teacher$_{js}$, $\mathbf{X}'_{is}$, $\mathbf{Z}'_{js}$
-\item $\gamma$: classroom FE. SEs clustered at student level
-\item \hlcoef{$\beta_3$}: additional effect when both student and peer are female
+\item \fadecolor{2}{\textbf{Peer$_{j}$}: evaluator; \textbf{Student$_{i}$}: evaluatee}
+\item \fadecolor{2}{\textbf{Controls:} self-score, teacher-score, background characteristics}
 \end{itemize}
 \end{frame}
 % ---- 27: Self-evaluation results (Pentabilities) ----
 \begin{frame}{Females underrate themselves}
 \centering
-\includegraphics[width=0.85\textwidth]{figures/PB_self_main.png}
+\includegraphics[width=0.6\textwidth]{figures/PB_self_main.png}
 \vspace{0.2cm}
 \scriptsize
 Female coefficient ($\beta_1$) across 5 SES domains, Pentabilities classroom observations. Classroom FE, z-scored outcomes.
@@ -598,7 +619,7 @@ Female coefficient ($\beta_1$) across 5 SES domains, Pentabilities classroom obs
 \begin{frame}{The Female-Female Premium}
 \label{slide:ff_premium}
 \centering
-\includegraphics[width=0.85\textwidth]{figures/PB_peer_main_FF.png}
+\includegraphics[width=0.6\textwidth]{figures/PB_peer_main_FF.png}
 \vspace{0.2cm}
 \scriptsize
 $\beta_3$ (StuFem $\times$ PeerFem) across 5 SES domains, Pentabilities CO. $N \approx$ 30,000+ peer evaluations, $\sim$911 students, 88 classrooms.
@@ -764,7 +785,7 @@ y_{ijgs} &=& \alpha
 + \beta_6\,(\text{PeerFem} \times \text{Treated})
 \nonumber \\
 &&
-+ \boldsymbol{\beta_7}\,(\mathbf{StuFem \times PeerFem \times Treated})
++ \bm{\beta_7}\,(\mathbf{StuFem \times PeerFem \times Treated})
 \nonumber \\
 &&
 + \text{360$^{\circ}$ score controls}
@@ -1141,36 +1162,28 @@ Universitat Aut\`onoma de Barcelona
 \input{tables/student_baseline}
 \end{frame}
 \section*{Backup}
-% ---- Econometric Specification Reference ----
-\begin{frame}{Econometric Specification Reference}
+% ---- Gender Interaction ----
+\begin{frame}{Gender Interaction}
 \label{slide:gender_int}
 \footnotesize
 \textbf{Peer-evaluation regression:}
 \[
-y_{ijs} = \beta_0
-+ \beta_1\,\text{StuFem}_i
-+ \beta_2\,\text{PeerFem}_j
-+ \beta_3\,(\text{StuFem} \times \text{PeerFem})_{ij}
-+ \mathbf{X}'\gamma
-+ \alpha_c
-+ \varepsilon_{ij}
+y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\text{StuFem} \times \text{PeerFem}) + \ldots
 \]
-\vspace{0.2cm}
-\begin{tabular}{lll}
-\toprule
-Coefficient & Comparison & Interpretation \\
-\midrule
-$\beta_0$ & M student, M peer & Baseline (reference) \\
-$\beta_1$ & F stu, M peer vs.\ M stu, M peer & Male peers neutral ($\approx 0$) \\
-$\beta_2$ & M stu, F peer vs.\ M stu, M peer & Female peers strict (negative) \\
-$\beta_3$ & Interaction (F$\times$F) & \textbf{Premium} (positive) \\
-$\beta_1 + \beta_3$ & F stu, F peer vs.\ M stu, F peer & FF premium (+0.19--0.37 SD) \\
-\bottomrule
-\end{tabular}
-\vspace{0.2cm}
-\textbf{Controls:} 360$^{\circ}$ scores, student and peer background.
-\textbf{FE:} Classroom.
-\textbf{Clustering:} Student.
+\medskip
+\textbf{Female peer's rating of a \textcolor{blue!70!black}{female} vs.\ \textcolor{blue!70!black}{male} student:}
+\begin{align*}
+\text{Female peer -- Female student:} &\quad \beta_1 + \beta_2 + \beta_3 \\
+\text{Female peer -- Male student:}   &\quad \beta_2 \\
+\text{Difference:}     &\quad (\beta_1 + \beta_2 + \beta_3)\ -\ (\beta_2) = \bm{\beta_1 + \beta_3}
+\end{align*}
+\medskip
+\textbf{So:}
+\begin{itemize}
+    \item[] $\bm{\beta_1 + \beta_3}$ captures the additional effect of being a \textbf{female student} (vs.\ male student) \emph{when the peer evaluator is female}.
+    \item[] This is the ``female peer $\rightarrow$ female student premium.''
+\end{itemize}
+\hyperlink{slide:ff_premium}{\beamerreturnbutton{Back}}
 \end{frame}
 % ---- Self-Evaluation Full Tables ----
 \begin{frame}{Self-Evaluation: Full Tables}
