@@ -605,50 +605,45 @@ y_{ijs} &= \alpha
 \item \fadecolor{2}{\textbf{Controls:} self-score, teacher-score, background characteristics}
 \end{itemize}
 \end{frame}
+
 % ---- 27: Self-evaluation results ----
-\begin{frame}{Females underrate themselves}
-\scriptsize
-\begin{tikzpicture}[remember picture, overlay]
-  \node[anchor=north east, inner sep=0pt]
-    at ([xshift=-0.3cm, yshift=-2.6cm]current page.north east)
-    {\resizebox{0.55\textwidth}{!}{\input{tables/self_main}}};
-\end{tikzpicture}
-\begin{minipage}{0.42\textwidth}
+\begin{frame}{Self-score:Females underrate themselves}
+\centering
+\vspace{0.1cm}
+\resizebox{0.9\textwidth}{!}{\input{tables/self_main}}
+\vspace{0.3cm}
+\small
 \begin{itemize}
   \setlength{\itemsep}{4pt}
   \item $\bm{\beta_1}$: female self-rating gap, conditional on teacher and peer scores
-  \item Largest in Emotional Management ($-$0.30 SD) and Thinking ($-$0.24 SD)
-  \item Stereotype-congruent domains
+  \item Largest in Emotional Management ($-$0.30 SD) and Thinking ($-$0.24 SD): stereotype-congruent domains
   \item Teacher and peer scores confirm girls are equally skilled
 \end{itemize}
-\end{minipage}
 \vfill
+\scriptsize
 \hyperlink{slide:self_full}{\beamergotobutton{Full Tables}}
 \end{frame}
 % ---- 28: Peer-evaluation results + summary ----
-\begin{frame}{The Female-Female Premium}
+\begin{frame}{Peer-score: The Female-Female Premium}
 \label{slide:ff_premium}
-\scriptsize
-\begin{tikzpicture}[remember picture, overlay]
-  \node[anchor=north east, inner sep=0pt]
-    at ([xshift=-0.3cm, yshift=-2.6cm]current page.north east)
-    {\resizebox{0.55\textwidth}{!}{\input{tables/peer_main}}};
-\end{tikzpicture}
-\begin{minipage}{0.42\textwidth}
+\centering
+\vspace{0.1cm}
+\resizebox{0.9\textwidth}{!}{\input{tables/peer_main}}
+\vspace{0.3cm}
+\small
 \begin{itemize}
   \setlength{\itemsep}{4pt}
   \item $\beta_1 \approx 0$: male peers are gender-neutral
   \item $\beta_2 < 0$: female peers are strict toward males
-  \item $\bm{\beta_3}$ = +0.23 to +0.45 SD: the female-female premium
-  \item Net FF effect ($\beta_1 + \beta_3$): +0.21 to +0.37 SD above male-male baseline
+  \item $\bm{\beta_3}$ = +0.23 to +0.45 SD: the premium emerges in female-female pairings
+  \item Net effect ($\beta_1 + \beta_3$): +0.21 to +0.37 SD above male-male baseline
 \end{itemize}
-\vspace{0.2cm}
-\textit{Driven by who is doing the rating, not who is being rated}
-\end{minipage}
 \vfill
+\scriptsize
 \hyperlink{slide:peer_full}{\beamergotobutton{Full Tables}}
 \hyperlink{slide:gender_int}{\beamergotobutton{Net Effect}}
 \end{frame}
+
 % ---- 29: Combined coefplot ----
 \begin{frame}{Self-underrating and FF premium across domains}
 \centering
