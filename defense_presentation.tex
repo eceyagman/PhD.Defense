@@ -606,53 +606,85 @@ y_{ijs} &= \alpha
 \end{itemize}
 \end{frame}
 % ---- 27: Self-evaluation results ----
-\begin{frame}{Females underrate themselves}
+\begin{frame}{Self-score: Females underrate themselves}
 \small
-\begin{columns}[T]
-\begin{column}{0.38\textwidth}
+\textbf{Q1:} Do female students rate their own SES differently from males, conditional on ability?
 \vspace{0.2cm}
-\begin{itemize}
-  \setlength{\itemsep}{6pt}
-  \item $\bm{\beta_1}$: female self-rating gap, conditional on teacher and peer scores
-  \item Largest in Emotional Management ($-$0.30 SD) and Thinking ($-$0.24 SD)
-  \item Stereotype-congruent domains
-  \item Teacher and peer scores confirm girls are equally skilled
-\end{itemize}
-\end{column}
-\begin{column}{0.60\textwidth}
-\vspace{0.1cm}
 \centering
-\resizebox{\textwidth}{!}{\input{tables/self_main}}
-\end{column}
-\end{columns}
-\vfill
+\resizebox{0.88\textwidth}{!}{%
+\begin{threeparttable}
+\begin{tabular}{l*{5}{c}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) \\
+ & Autonomy & Cooperation & Responsibility & Emotion & Thinking \\
+\midrule
+\rowcolor{HopBlue!8}
+Female Student ($\bm{\beta_1}$) & $-$0.141\sym{*} & $-$0.101 & $-$0.085 & $-$\textbf{0.302}\sym{***} & $-$\textbf{0.239}\sym{***} \\
+\rowcolor{HopBlue!8}
+ & (0.081) & (0.078) & (0.074) & (0.090) & (0.090) \\[3pt]
+Teacher Score & 0.177\sym{***} & 0.117\sym{**} & 0.137\sym{***} & 0.087 & 0.042 \\
+ & (0.061) & (0.058) & (0.053) & (0.058) & (0.066) \\[3pt]
+Average Peer Score & 0.270\sym{***} & 0.290\sym{***} & 0.384\sym{***} & 0.319\sym{***} & 0.306\sym{***} \\
+ & (0.080) & (0.074) & (0.068) & (0.089) & (0.080) \\
+\midrule
+Observations & 525 & 628 & 692 & 462 & 468 \\
+Adj.\ R-squared & 0.207 & 0.211 & 0.231 & 0.191 & 0.249 \\
+Classroom FE & Yes & Yes & Yes & Yes & Yes \\
+Socio-demographic controls & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
 \scriptsize
-\hyperlink{slide:self_full}{\beamergotobutton{Full Tables}}
+\item \textit{Notes:} Robust standard errors in parentheses, clustered at classroom level. Dependent variable is self-assigned z-score. \sym{*}$p<0.10$, \sym{**}$p<0.05$, \sym{***}$p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+}
+\vspace{0.2cm}
+\small
+\flushleft
+\textcolor{HopBlue}{\textbf{$\Rightarrow$}} Girls underrate themselves most in Emotional Management ($-$0.30 SD) and Thinking ($-$0.24 SD): stereotype-congruent domains.
 \end{frame}
 % ---- 28: Peer-evaluation results + summary ----
-\begin{frame}{The Female-Female Premium}
+\begin{frame}{Peer-score: The Female-Female Premium}
 \label{slide:ff_premium}
 \small
-\begin{columns}[T]
-\begin{column}{0.38\textwidth}
-\vspace{0.2cm}
-\begin{itemize}
-  \setlength{\itemsep}{6pt}
-  \item $\beta_1 \approx 0$: male peers are gender-neutral
-  \item $\beta_2 < 0$: female peers strict toward males
-  \item $\bm{\beta_3}$ = +0.23 to +0.45 SD: the FF premium
-  \item Net effect ($\beta_1 + \beta_3$): +0.21 to +0.37 SD
-\end{itemize}
-\vspace{0.3cm}
-\footnotesize
-\textit{Driven by who is doing the rating, not who is being rated}
-\end{column}
-\begin{column}{0.60\textwidth}
+\textbf{Q2:} Is there a systematic gender pattern in how peers evaluate each other's SES?
 \vspace{0.1cm}
 \centering
-\resizebox{\textwidth}{!}{\input{tables/peer_main}}
-\end{column}
-\end{columns}
+\resizebox{0.88\textwidth}{!}{%
+\begin{threeparttable}
+\begin{tabular}{l*{5}{c}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) \\
+ & Autonomy & Cooperation & Responsibility & Emotion & Thinking \\
+\midrule
+Female Student ($\beta_1$) & $-$0.086 & $-$0.112\sym{**} & $-$0.019 & $-$0.044 & $-$0.110 \\
+ & (0.065) & (0.056) & (0.056) & (0.059) & (0.069) \\[2pt]
+Female Peer ($\beta_2$) & $-$0.207\sym{***} & $-$0.293\sym{***} & $-$0.156\sym{***} & $-$0.231\sym{***} & $-$0.205\sym{***} \\
+ & (0.064) & (0.053) & (0.055) & (0.056) & (0.067) \\[2pt]
+\rowcolor{HopBlue!8}
+Fem.Stu $\times$ Fem.Peer ($\bm{\beta_3}$) & 0.454\sym{***} & 0.406\sym{***} & 0.232\sym{***} & 0.357\sym{***} & 0.415\sym{***} \\
+\rowcolor{HopBlue!8}
+ & (0.084) & (0.068) & (0.070) & (0.076) & (0.081) \\
+\midrule
+\rowcolor{HopBlue!8}
+$\beta_1 + \beta_3$ & 0.368\sym{***} & 0.294\sym{***} & 0.213\sym{***} & 0.312\sym{***} & 0.305\sym{***} \\
+\midrule
+Observations & 2,006 & 2,842 & 2,762 & 2,239 & 2,065 \\
+Classroom FE & Yes & Yes & Yes & Yes & Yes \\
+360$^{\circ}$ score controls & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\scriptsize
+\item \textit{Notes:} Standard errors clustered at student level in parentheses. Dependent variable is peer-assigned z-score. Controls include self and teacher scores for both student and peer, plus background characteristics. \sym{*}$p<0.10$, \sym{**}$p<0.05$, \sym{***}$p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+}
+\vspace{0.1cm}
+\small
+\flushleft
+\textcolor{HopBlue}{\textbf{$\Rightarrow$}} The premium emerges in female-female pairings: +0.21 to +0.37 SD above male-male baseline.
 \vfill
 \scriptsize
 \hyperlink{slide:peer_full}{\beamergotobutton{Full Tables}}
