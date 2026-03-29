@@ -737,7 +737,8 @@ y_{ijs} &= \alpha
 \begin{enumerate}
     \item \textbf{Girls underrate themselves.} Conditional on teacher and peer assessments, female students score their own skills 0.24--0.47 SD lower, concentrated in domains with the strongest gender stereotypes
     \vspace{0.3cm}
-    \item \textbf{Female peers rate other girls higher.} A +0.21 to +0.43 SD premium in every domain. Male peers show no gender pattern.
+    \item \textbf{Female peers rate other girls higher.} A +0.21 to +0.43 SD premium in every domain. Male peers show no gender pattern. \hyperlink{slide:selfeval_dev}{\beamergotobutton{Self-Eval Deviations}}
+\hyperlink{slide:friendship}{\beamergotobutton{Friendship}}
 \end{enumerate}
 \vspace{0.4cm}
 \textbf{Why this matters:}
@@ -747,9 +748,6 @@ y_{ijs} &= \alpha
 \end{itemize}
 \vspace{0.2cm}
 
-\hyperlink{slide:selfeval_dev}{\beamergotobutton{Self-Eval Deviations}}
-\hyperlink{slide:friendship}{\beamergotobutton{Friendship}}
-\vspace{0.2cm}
 
 \textit{Can the program, designed for skill-building, reshape these patterns?}
 \end{frame}
@@ -1028,21 +1026,7 @@ Ch. & Question & Finding \\
     \item Skill and academic effects may follow with longer exposure
 \end{itemize}
 \end{frame}
-% ---- 49: Limitations ----
-\begin{frame}{Limitations}
-\small
-\begin{itemize}
-    \item \textbf{Short evaluation window:} One school year (6 months of implementation). Longer-run effects unmeasured
-    \vspace{0.2cm}
-    \item \textbf{CO data is treatment-only} in Chapter 2: cannot test treatment effects on gender gap within CO
-    \vspace{0.2cm}
-    \item \textbf{Power for triple interactions:} Some Chapter 3 results are suggestive rather than definitive
-    \vspace{0.2cm}
-    \item \textbf{Generalizability:} Catalan public secondary schools serving disadvantaged communities. External validity to other contexts requires further study
-    \vspace{0.2cm}
-    \item \textbf{Self-report measures:} BESSI and some CO components rely on subjective assessments
-\end{itemize}
-\end{frame}
+
 % ---- 50: Future Work ----
 \begin{frame}{Future Work}
 \small
@@ -1074,9 +1058,9 @@ These evaluations carry systematic patterns tied to gender and social identity, 
 \begin{center}
 {\LARGE \textbf{Thank you / Gr\`acies / Gracias}}
 \vspace{1cm}
-Ece Yagman \\
-\texttt{[email]} \\ %TODO: fill in email
-Universitat Aut\`onoma de Barcelona
+ \\
+\href{eceyagman@gmail.com}{eceyagman@gmail.com} \\ 
+
 \end{center}
 \vfill
 \end{frame}
@@ -1088,6 +1072,8 @@ Universitat Aut\`onoma de Barcelona
 \def\newblock{}
 \bibliography{paperpile}
 \end{frame}
+
+
 \section*{Supplemental}
 \begin{frame}{Complexity}
 \label{complexity}
@@ -1179,8 +1165,7 @@ Universitat Aut\`onoma de Barcelona
 \hyperlink{slide:sample}{\beamerreturnbutton{Back}}
 \input{tables/student_baseline}
 \end{frame}
-\section*{Backup}
-% ---- Gender Interaction ----
+
 \begin{frame}{Gender Interaction}
 \label{slide:gender_int}
 \footnotesize
@@ -1303,14 +1288,13 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \end{frame}
 % ---- Self-Evaluation Deviations: Self - Peer ----
 \begin{frame}{Self-Evaluation Deviations: Self $-$ Peer}
-\label{slide:selfeval_dev}
-\vspace{-0.2cm}
+\label{slide:selfeval_dev}\vspace{-0.2cm}
 \centering
 \begin{tabular}{cc}
-  \includegraphics[width=0.30\textwidth]{figures/co_selfpeer_dev_gender.png} &
-  \includegraphics[width=0.30\textwidth]{figures/fa_selfpeer_dev_gender.png} \\
+  \includegraphics[width=0.33\textwidth]{figures/co_selfpeer_dev_gender.png} &
+  \includegraphics[width=0.33\textwidth]{figures/fa_selfpeer_dev_gender.png} \\
 \end{tabular}\\[-0.1cm]
-\includegraphics[width=0.30\textwidth]{figures/bessi_selfpeer_dev_gender.png}
+\includegraphics[width=0.33\textwidth]{figures/bessi_selfpeer_dev_gender.png}
 \vspace{0.05cm}
 \scriptsize
 \begin{itemize}
@@ -1321,8 +1305,8 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \vfill
 \begin{flushleft}
 \hyperlink{slide:selfeval_tch}{\beamergotobutton{Self $-$ Teacher}}
-\hyperlink{slide:selfeval_eo}{\beamergotobutton{Self $-$ EO}}
-\quad \hyperlink{slide:ch2takeaway}{\beamerreturnbutton{Back}}
+\hyperlink{slide:selfeval_eo}{\beamergotobutton{Self $-$ EO}} \hfill
+ \hyperlink{slide:ch2takeaway}  {\beamerreturnbutton{Back}}
 \end{flushleft}
 \end{frame}
 % ---- Self-Evaluation Deviations: Self - Teacher ----
