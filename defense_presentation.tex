@@ -646,6 +646,7 @@ y_{ijs} &= \alpha
 \begin{itemize}
 \item \fadecolor{2}{\textbf{Peer$_{j}$}: evaluator; \textbf{Student$_{i}$}: evaluatee}
 \item \fadecolor{2}{\textbf{Controls:} self-score, teacher-score, background characteristics}
+\item \fadecolor{2}$\bm{\beta_3}$: \textit{}
 \end{itemize}
 \end{frame}
 % ---- 27: Self-evaluation results ----
@@ -1283,21 +1284,22 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 % ---- Friendship Mediation (NEW since submitted version) ----
 \begin{frame}{Friendship Mediation}
 \label{slide:friendship}
-\small
-\pill{New since submitted version}
-\vspace{0.3cm}
-\resizebox{\textwidth}{!}{\input{tables/friendship_combined_360}}
-\vspace{0.3cm}
-\textbf{Key result:} Friendship absorbs at most 19\% (CO), 8--16\% (BESSI), 0\% (FA) of the FF premium
-\vspace{0.2cm}
-Friendship predicts higher ratings ($\gamma \approx 0.15$ SD, significant), but enters \emph{additively}: same boost for all pairings. Cannot explain a gender-specific pattern.
+\input{tables/friendship_combined_360}
+\vspace{0.1cm}
+\begin{itemize}
+\footnotesize
+  \setlength{\itemsep}{2pt}
+  \item Friendship absorbs 10--20\% (CO), 8--16\% (BESSI), 0\% (FA) of the FF premium
+  \item FA: random groups break the friendship channel; BL friendship has no predictive power
+  \item The remaining $\sim$80\% reflects in-group evaluation patterns, not pre-existing relationships
+\end{itemize}
 \end{frame}
+
 % ---- Friendship Coefplot (NEW since submitted version) ----
 \begin{frame}{Friendship \& Male Neutrality}
 \label{slide:friendship_coef}
 \small
-\pill{New since submitted version}
-\vspace{0.3cm}
+\vspace{0.1cm}
 %TODO: Uncomment once defense_friendship_coefplot.pdf is generated
 %\centering
 %\includegraphics[width=0.8\textwidth]{figures/defense_friendship_coefplot.pdf}
@@ -1313,8 +1315,7 @@ Friendship predicts higher ratings ($\gamma \approx 0.15$ SD, significant), but 
 \begin{frame}{Self-Evaluation Deviations}
 \label{slide:selfeval_dev}
 \small
-\pill{New since submitted version}
-\vspace{0.3cm}
+\vspace{0.1cm}
 %TODO: Uncomment once figures are generated
 %\includegraphics[width=0.8\textwidth]{figures/desc_selfeval_dev.png}
 \textcolor{gray}{\textit{[Figures: Self minus benchmark gaps by gender (3 CO raw, 2 BESSI, 2 FA)]}}
@@ -1323,6 +1324,7 @@ Friendship predicts higher ratings ($\gamma \approx 0.15$ SD, significant), but 
 \vspace{0.2cm}
 \textbf{BESSI/FA:} Genuine female underestimation
 \end{frame}
+
 % ---- Sample Attrition Funnel ----
 \begin{frame}{Sample Attrition Funnel}
 \label{slide:attrition}
