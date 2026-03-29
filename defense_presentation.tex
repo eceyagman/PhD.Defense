@@ -1273,18 +1273,18 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 % ---- Friendship Coefplot (NEW since submitted version) ----
 \begin{frame}{Friendship \& Male Neutrality}
 \label{slide:friendship_coef}
-\small
+\centering
+\includegraphics[width=0.70\textwidth]{figures/defense_friendship_coefplot.png}
 \vspace{0.1cm}
-%TODO: Uncomment once defense_friendship_coefplot.pdf is generated
-%\centering
-%\includegraphics[width=0.8\textwidth]{figures/defense_friendship_coefplot.pdf}
-\textcolor{gray}{\textit{[Figure: Horizontal coefplot, $\beta_1$ and $\beta_1+\beta_3$ before/after friendship control]}}
-\vspace{0.3cm}
-\textbf{Reading the figure:}
+\scriptsize
 \begin{itemize}
-    \item Left cluster: $\beta_1 \approx 0$ in both models, male peers are gender-neutral
-    \item Right cluster: FF premium ($\beta_1 + \beta_3$) barely shifts with friendship, only 10--20\% mediated
+  \setlength{\itemsep}{2pt}
+  \item $\beta_1 \approx 0$: male peers rate female and male students the same (gender-neutral)
+  \item $\beta_1 + \beta_3$ barely shifts with friendship control (10--20\% mediated)
+  \item \textbf{What about M-M?} M-M is the reference group ($\alpha$). $\beta_1 \approx 0$ means male peers do not differentiate by student gender, consistent with no M-M in-group premium. However, M-M is absorbed into the intercept: this parameterization isolates the FF interaction ($\beta_3$), not same-gender effects symmetrically.
 \end{itemize}
+\vfill
+\hyperlink{slide:friendship}{\beamerreturnbutton{Summary Table}}
 \end{frame}
 % ---- Self-Evaluation Deviations: Self - Peer ----
 \begin{frame}{Self-Evaluation Deviations: Self $-$ Peer}
