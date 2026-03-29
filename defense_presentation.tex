@@ -656,7 +656,7 @@ y_{ijs} &= \alpha
 \vspace{0.15cm}
 \footnotesize
 \begin{itemize}
-\item[$\Rightarrow$] \textcolor{HopBlue}{Emotional Management} \textbf{$\downarrow$ 0.30 \sym{***}} and \textcolor{HopBlue}{Thinking Abilities} \textbf{$\downarrow$ 0.24 \sym{***}}, ``male-typed'' domains
+\item[$\Rightarrow$] \textcolor{HopBlue}{Emotional Management} \textbf{$\downarrow$ 0.30 SD \sym{***}} and \textcolor{HopBlue}{Thinking Abilities} \textbf{$\downarrow$ 0.24 SD \sym{***}}, ``male-typed'' domains
 \end{itemize}
 \end{frame}
 % ---- 28: Peer-evaluation results + summary ----
@@ -730,7 +730,7 @@ y_{ijs} &= \alpha
 \end{itemize}
 \end{frame}
 % ---- 34: Chapter 2 Takeaway ----
-\begin{frame}{Chapter 2: Takeaway}
+\begin{frame}{Chapter 2: Takeaway}\label{slide:ch2takeaway}
 \small
 \textbf{Two findings, robust across four independent measurement approaches:}
 \vspace{0.3cm}
@@ -749,7 +749,6 @@ y_{ijs} &= \alpha
 
 \hyperlink{slide:selfeval_dev}{\beamergotobutton{Self-Eval Deviations}}
 \hyperlink{slide:friendship}{\beamergotobutton{Friendship}}
-\hyperlink{slide:immig_het}{\beamergotobutton{Immigration}}
 \vspace{0.2cm}
 
 \textit{Can the program, designed for skill-building, reshape these patterns?}
@@ -1302,18 +1301,65 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
     \item Right cluster: FF premium ($\beta_1 + \beta_3$) barely shifts with friendship, only 10--20\% mediated
 \end{itemize}
 \end{frame}
-% ---- Self-Evaluation Deviation (NEW since submitted version) ----
-\begin{frame}{Self-Evaluation Deviations}
+% ---- Self-Evaluation Deviations: Self - Peer ----
+\begin{frame}{Self-Evaluation Deviations: Self $-$ Peer}
 \label{slide:selfeval_dev}
-\small
+\centering
+\begin{tabular}{ccc}
+  \includegraphics[width=0.32\textwidth]{figures/co_selfpeer_dev_gender.png} &
+  \includegraphics[width=0.32\textwidth]{figures/fa_selfpeer_dev_gender.png} &
+  \includegraphics[width=0.32\textwidth]{figures/bessi_selfpeer_dev_gender.png} \\
+\end{tabular}
 \vspace{0.1cm}
-%TODO: Uncomment once figures are generated
-%\includegraphics[width=0.8\textwidth]{figures/desc_selfeval_dev.png}
-\textcolor{gray}{\textit{[Figures: Self minus benchmark gaps by gender (3 CO raw, 2 BESSI, 2 FA)]}}
-\vspace{0.3cm}
-\textbf{CO:} Males overestimate (+0.26 to +0.38 rubric points above peer ratings), females approximately calibrated
-\vspace{0.2cm}
-\textbf{BESSI/FA:} Genuine female underestimation
+\footnotesize
+\begin{itemize}
+  \setlength{\itemsep}{2pt}
+  \item \textbf{CO:} Males overestimate (+0.26 to +0.38 above peer ratings), females approximately calibrated
+  \item \textbf{FA and BESSI:} Genuine female underestimation, especially in Emotional Management
+\end{itemize}
+\vfill
+\hyperlink{slide:ch2takeaway}{\beamerreturnbutton{Back}}
+\hfill
+\hyperlink{slide:selfeval_tch}{\beamergotobutton{Self $-$ Teacher}}
+\hyperlink{slide:selfeval_eo}{\beamergotobutton{Self $-$ EO}}
+\end{frame}
+% ---- Self-Evaluation Deviations: Self - Teacher ----
+\begin{frame}{Self-Evaluation Deviations: Self $-$ Teacher}
+\label{slide:selfeval_tch}
+\centering
+\begin{tabular}{cc}
+  \includegraphics[width=0.45\textwidth]{figures/co_selftch_dev_gender.png} &
+  \includegraphics[width=0.45\textwidth]{figures/bessi_selftch_dev_gender.png} \\
+\end{tabular}
+\vspace{0.1cm}
+\footnotesize
+\begin{itemize}
+  \setlength{\itemsep}{2pt}
+  \item Both genders rate themselves above teacher scores, but the gap is substantially larger for males
+\end{itemize}
+\vfill
+\hyperlink{slide:selfeval_dev}{\beamerreturnbutton{Self $-$ Peer}}
+\hfill
+\hyperlink{slide:selfeval_eo}{\beamergotobutton{Self $-$ EO}}
+\end{frame}
+% ---- Self-Evaluation Deviations: Self - EO ----
+\begin{frame}{Self-Evaluation Deviations: Self $-$ External Observer}
+\label{slide:selfeval_eo}
+\centering
+\begin{tabular}{cc}
+  \includegraphics[width=0.45\textwidth]{figures/co_selfeo_dev_gender.png} &
+  \includegraphics[width=0.45\textwidth]{figures/fa_selfeo_dev_gender.png} \\
+\end{tabular}
+\vspace{0.1cm}
+\footnotesize
+\begin{itemize}
+  \setlength{\itemsep}{2pt}
+  \item Same pattern: males consistently overestimate relative to independent external observers
+\end{itemize}
+\vfill
+\hyperlink{slide:selfeval_dev}{\beamerreturnbutton{Self $-$ Peer}}
+\hfill
+\hyperlink{slide:selfeval_tch}{\beamergotobutton{Self $-$ Teacher}}
 \end{frame}
 % ---- Sample Attrition Funnel ----
 \begin{frame}{Sample Attrition Funnel}
@@ -1378,21 +1424,6 @@ Very High (Molt alta)    &  4 &  4 &  4 &  8 \\
 \label{slide:balance}
 %TODO: \input{tables/balance_table}
 \textcolor{gray}{\textit{[Balance table: student, school characteristics across T and C]}}
-\end{frame}
-% ---- Immigration Heterogeneity ----
-\begin{frame}{Self-Evaluation Heterogeneity: Immigration}
-\label{slide:immig_het}
-\small
-\vspace{0.1cm}
-%TODO: \input{tables/mechanism/selfeval_het_immig}
-\textcolor{gray}{\textit{[Table: Immigration is the only moderator with consistent heterogeneity]}}
-\vspace{0.3cm}
-Immigration widens the female self-evaluation gap in:
-\begin{itemize}
-    \item Cooperation (CO $-$0.280\sym{*}, BESSI $-$0.279\sym{**})
-    \item Responsibility (CO $-$0.350\sym{**})
-\end{itemize}
-Other moderators (mother's education, SES index, school complexity) show no systematic pattern.
 \end{frame}
 % ---- Consequences Analysis ----
 \begin{frame}{Self-Evaluation Consequences}
