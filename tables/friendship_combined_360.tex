@@ -1,53 +1,23 @@
 
-\begin{table}[htp]
-\centering
-\small
 \begin{threeparttable}
-\caption{Friendship Mediation of the Female-Female Premium}
-\label{tab:friendship_combined}
-\begin{tabular}{lccccc}
-\toprule
- & Autonomy & Cooperation & Responsibility & Emotion & Thinking \\
-\midrule
-\multicolumn{6}{l}{\textit{Panel A: Classroom Observations}} \\[2pt]
-Fem Stu $\times$ Fem Peer ($\beta_3$) & 0.374*** & 0.366*** & 0.139 & 0.251*** & 0.370*** \\
- & (0.097) & (0.078) & (0.085) & (0.087) & (0.088) \\
-Obs$\rightarrow$Friend (BL) & 0.146*** & 0.117*** & 0.171*** & 0.203*** & 0.174*** \\
- & (0.050) & (0.043) & (0.042) & (0.045) & (0.047) \\[4pt]
-$\beta_1 + \beta_3$ & 0.319*** & 0.281*** & 0.188*** & 0.252*** & 0.280*** \\
- & (0.074) & (0.059) & (0.065) & (0.070) & (0.076) \\
-\% mediated &  19\% &  19\% &  19\% &  19\% &  19\% \\
-Observations & 1626 & 2306 & 2224 & 1866 & 1718 \\
-R-squared & 0.311 & 0.298 & 0.269 & 0.255 & 0.316 \\
-\midrule
-\multicolumn{6}{l}{\textit{Panel B: Lab-in-the-Field}} \\[2pt]
-Fem Stu $\times$ Fem Peer ($\beta_3$) & 0.187** & 0.261*** & 0.243*** & 0.157* & 0.305*** \\
- & (0.089) & (0.089) & (0.084) & (0.095) & (0.095) \\
-Obs$\rightarrow$Friend (BL) & 0.002 & -0.085* & -0.022 & -0.093* & -0.014 \\
- & (0.051) & (0.050) & (0.049) & (0.055) & (0.052) \\[4pt]
-$\beta_1 + \beta_3$ & 0.170*** & 0.285*** & 0.311*** & 0.186*** & 0.256*** \\
- & (0.066) & (0.068) & (0.063) & (0.068) & (0.071) \\
-\% mediated & 0\% & -11\% & -2\% & -20\% & -2\% \\
-Observations & 1623 & 1619 & 1619 & 1592 & 1604 \\
-R-squared & 0.345 & 0.373 & 0.370 & 0.287 & 0.316 \\
-\midrule
- & Self Mngt & Social Engt & Cooperation & Emot. Mngt & Innovation \\
-\midrule
-\multicolumn{6}{l}{\textit{Panel C: BESSI}} \\[2pt]
-Fem Stu $\times$ Fem Peer ($\beta_3$) & 0.268*** & 0.218** & 0.161* & 0.251*** & 0.160* \\
- & (0.086) & (0.098) & (0.092) & (0.089) & (0.084) \\
-Obs$\rightarrow$Friend (BL) & 0.148*** & 0.126** & 0.168*** & 0.100* & 0.135*** \\
- & (0.054) & (0.054) & (0.053) & (0.053) & (0.051) \\[4pt]
-$\beta_1 + \beta_3$ & 0.357*** & 0.226*** & 0.252*** & 0.355*** & 0.331*** \\
- & (0.070) & (0.072) & (0.069) & (0.070) & (0.063) \\
-\% mediated & 11\% & 14\% & 16\% & 8\% & 11\% \\
-Observations & 1106 & 1104 & 1103 & 1102 & 1102 \\
-Adj. R-squared & 0.404 & 0.247 & 0.283 & 0.238 & 0.329 \\
-\bottomrule
-\end{tabular}
-\begin{tablenotes}[flushleft]
 \footnotesize
-\item \textit{Note:} Each panel augments the baseline peer-evaluation regression with a friendship indicator (whether the observer nominated the student as a top-5 friend at baseline). Panel~A: classroom observations with 360° controls (teacher, self, peer-self, and peer-teacher scores). Panel~B: lab-in-the-field with EO and self score controls. Panel~C: BESSI endline peer evaluations with self and teacher score controls. All models include Female Student ($\beta_1$), Female Peer ($\beta_2$), student and peer background controls, and classroom fixed effects. SE clustered at student level. $\beta_1 + \beta_3$ is the net female--female effect. \% mediated $= 100 \times [1 - (\beta_1+\beta_3)^{\text{friend}}/(\beta_1+\beta_3)^{\text{base}}]$, where the base model excludes the friendship control. *$p<0.10$, **$p<0.05$, ***$p<0.01$.
+\renewcommand{\arraystretch}{1.1}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l*{3}{>{\centering\arraybackslash}p{2.2cm}}}
+\toprule
+ & \textbf{Classroom Obs.} & \textbf{Lab Task (FA)} & \textbf{BESSI Survey} \\
+\midrule
+\rowcolor{HopBlue!6}
+Peer assignment & Classroom groups & Random groups & Random peers \\
+BL friend $\rightarrow$ rating & \hlcoef{0.12--0.20}*** & $\sim$0 & \hlcoef{0.10--0.17}*** \\
+\rowcolor{HopBlue!6}
+\% FF premium mediated & 10--20\% & 0\% & 8--16\% \\
+FF premium after control & \checkmark\ all *** & \checkmark\ all *** & \checkmark\ all *** \\
+\bottomrule
+\end{tabular}%
+}
+\begin{tablenotes}[flushleft]
+\tiny
+\item \textit{Note:} 360 spec with score controls, background controls, classroom FE. BL friendship: observer nominated student as top-5 friend at baseline. \% mediated $= 100[1{-}(\beta_1{+}\beta_3)^{\text{friend}}/(\beta_1{+}\beta_3)^{\text{base}}]$. SE clustered at student.
 \end{tablenotes}
 \end{threeparttable}
-\end{table}

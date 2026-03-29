@@ -646,6 +646,7 @@ y_{ijs} &= \alpha
 \begin{itemize}
 \item \fadecolor{2}{\textbf{Peer$_{j}$}: evaluator; \textbf{Student$_{i}$}: evaluatee}
 \item \fadecolor{2}{\textbf{Controls:} self-score, teacher-score, background characteristics}
+\item \fadecolor{2}{$\bm{\beta_3}$: \textit{Do female peers rate female students differently than they rate male students?}}
 \end{itemize}
 \end{frame}
 % ---- 27: Self-evaluation results ----
@@ -766,25 +767,6 @@ y_{ijs} &= \alpha
 \begin{itemize}
     \item Months of classroom observation $\Leftrightarrow$ Brief survey in a lab setting $\Leftrightarrow$ Conventional validated survey
 \end{itemize}
-\end{frame}
-% ---- 33: Policy Relevance ----
-\begin{frame}{Policy Relevance}
-\small
-\textbf{Targeted interventions to reduce misperceptions:}
-\begin{itemize}
-    \item Show students the gap between their own assessment and what peers and teachers see
-    \item Make blind spots visible: where self-ratings diverge most from external benchmarks
-    \item Structured feedback sessions that use the 360$^{\circ}$ data to calibrate self-perception
-\end{itemize}
-\vspace{0.3cm}
-\textbf{Discussions around gender norms and stereotypes:}
-\begin{itemize}
-    \item SES respond to well-structured school-based programs that address misperceptions \citep{Alan2025-jr}
-    \item Educational discussion groups around gender norms among adolescents can reduce misperceptions \citep{Matavelli2025-gh}, with effects that persist beyond the short run \citep{Dhar2022-cn}
-\end{itemize}
-\vspace{0.3cm}
-\footnotesize
-\textit{The program was not designed as a debiasing tool, but its evaluative infrastructure could be leveraged for targeted interventions}
 \end{frame}
 % ---- 34: Chapter 2 Takeaway ----
 \begin{frame}{Chapter 2: Takeaway}
@@ -1062,10 +1044,11 @@ Ch. & Question & Finding \\
 % ---- 48: Policy Implications ----
 \begin{frame}{Policy Implications}
 \small
-\textbf{1. Feedback design can address self-underrating}
+\textbf{1. Leverage the 360$^{\circ}$ data to address self-underrating}
 \begin{itemize}
-    \item Girls receive favorable evaluations from peers but discount their own abilities
-    \item Structured feedback showing self vs.\ peer scores could help calibrate self-perception
+    \item Show students where self-ratings diverge from peer and teacher benchmarks
+    \item Structured feedback sessions can calibrate self-perception \citep{Alan2025-jr}
+    \item Discussion groups around gender norms reduce misperceptions with lasting effects \citep{Matavelli2025-gh, Dhar2022-cn}
 \end{itemize}
 \vspace{0.2cm}
 \textbf{2. Context matters for implementation}
@@ -1078,7 +1061,6 @@ Ch. & Question & Finding \\
 \begin{itemize}
     \item Process measures change first (classroom routines, evaluative norms)
     \item Skill and academic effects may follow with longer exposure
-    \item Accountability for SEL should incorporate process measures, not rely exclusively on short-run test scores
 \end{itemize}
 \end{frame}
 % ---- 49: Limitations ----
@@ -1283,21 +1265,21 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 % ---- Friendship Mediation (NEW since submitted version) ----
 \begin{frame}{Friendship Mediation}
 \label{slide:friendship}
-\small
-\pill{New since submitted version}
-\vspace{0.3cm}
-\resizebox{\textwidth}{!}{\input{tables/friendship_combined_360}}
-\vspace{0.3cm}
-\textbf{Key result:} Friendship absorbs at most 19\% (CO), 8--16\% (BESSI), 0\% (FA) of the FF premium
-\vspace{0.2cm}
-Friendship predicts higher ratings ($\gamma \approx 0.15$ SD, significant), but enters \emph{additively}: same boost for all pairings. Cannot explain a gender-specific pattern.
+\input{tables/friendship_combined_360}
+\vspace{0.1cm}
+\begin{itemize}
+\footnotesize
+  \setlength{\itemsep}{2pt}
+  \item Friendship absorbs 10--20\% (CO), 8--16\% (BESSI), 0\% (FA) of the FF premium
+  \item FA: random groups break the friendship channel; BL friendship has no predictive power
+  \item The remaining $\sim$80\% reflects in-group evaluation patterns, not pre-existing relationships
+\end{itemize}
 \end{frame}
 % ---- Friendship Coefplot (NEW since submitted version) ----
 \begin{frame}{Friendship \& Male Neutrality}
 \label{slide:friendship_coef}
 \small
-\pill{New since submitted version}
-\vspace{0.3cm}
+\vspace{0.1cm}
 %TODO: Uncomment once defense_friendship_coefplot.pdf is generated
 %\centering
 %\includegraphics[width=0.8\textwidth]{figures/defense_friendship_coefplot.pdf}
@@ -1313,8 +1295,7 @@ Friendship predicts higher ratings ($\gamma \approx 0.15$ SD, significant), but 
 \begin{frame}{Self-Evaluation Deviations}
 \label{slide:selfeval_dev}
 \small
-\pill{New since submitted version}
-\vspace{0.3cm}
+\vspace{0.1cm}
 %TODO: Uncomment once figures are generated
 %\includegraphics[width=0.8\textwidth]{figures/desc_selfeval_dev.png}
 \textcolor{gray}{\textit{[Figures: Self minus benchmark gaps by gender (3 CO raw, 2 BESSI, 2 FA)]}}
@@ -1391,8 +1372,7 @@ Very High (Molt alta)    &  4 &  4 &  4 &  8 \\
 \begin{frame}{Self-Evaluation Heterogeneity: Immigration}
 \label{slide:immig_het}
 \small
-\pill{New since submitted version}
-\vspace{0.3cm}
+\vspace{0.1cm}
 %TODO: \input{tables/mechanism/selfeval_het_immig}
 \textcolor{gray}{\textit{[Table: Immigration is the only moderator with consistent heterogeneity]}}
 \vspace{0.3cm}
@@ -1407,8 +1387,7 @@ Other moderators (mother's education, SES index, school complexity) show no syst
 \begin{frame}{Self-Evaluation Consequences}
 \label{slide:consequences}
 \small
-\pill{New since submitted version}
-\vspace{0.3cm}
+\vspace{0.1cm}
 %TODO: \input{tables/mechanism/selfeval_consequences_gpa}
 \textcolor{gray}{\textit{[Tables: GPA and absences as outcomes of self-evaluation gaps]}}
 \vspace{0.3cm}
