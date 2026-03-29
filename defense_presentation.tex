@@ -696,60 +696,21 @@ y_{ijs} &= \alpha
 \end{columns}
 \end{frame}
 % ---- 30: Robustness overview ----
-\begin{frame}{Robustness}
+\begin{frame}{Robustness}\label{slide:robustness}
 \small
 \textbf{Do the findings replicate across evaluators, settings, and measurement methods?}
 \vspace{0.4cm}
 \begin{enumerate}
   \setlength{\itemsep}{12pt}
   \item \textcolor{HopBlue}{\textbf{External Observer (EO) score:}} Replace teacher/peer score controls with independent observer ratings (in-classroom)
+  \hfill \hyperlink{slide:rob_eo}{\beamergotobutton{EO}}
   \item \textcolor{HopBlue}{\textbf{Lab-in-the-field activity (FA):}} Standardized task, randomly assigned groups, controlled setting outside the classroom
+  \hfill \hyperlink{slide:rob_fa}{\beamergotobutton{FA}}
   \item \textcolor{HopBlue}{\textbf{BESSI survey:}} Validated 360\textsuperscript{o} instrument at endline, measures functional capacities (i.e., how well one can perform key behaviors)
+  \hfill \hyperlink{slide:rob_bessi}{\beamergotobutton{BESSI}}
 \end{enumerate}
 \end{frame}
-% ---- 31: Robustness 1 - EO ----
-\begin{frame}{1. External Observer Score}
-\centering
-\includegraphics[width=0.70\textwidth]{figures/PB_self_peer_EO_combined.png}
-\vspace{0.2cm}
-\footnotesize
-\begin{itemize}
-\item[$\Rightarrow$] \textbf{Fem self-underrating:} negative across all domains, not significant (smaller $N$)
-\item[$\Rightarrow$] \textbf{FF premium:} \textcolor{HopBlue}{\textbf{$\uparrow$ 0.20--0.40\sym{***} SD}}
-\end{itemize}
-\vfill
-\scriptsize
-\hyperlink{slide:rob_eo}{\beamergotobutton{EO tables}}
-\end{frame}
-% ---- 32: Robustness 2 - FA ----
-\begin{frame}{2. Lab-in-the-Field Activity (FA)}
-\centering
-\includegraphics[width=0.70\textwidth]{figures/PB_self_peer_FA_combined.png}
-\vspace{0.2cm}
-\footnotesize
-\begin{itemize}
-\item[$\Rightarrow$] \textbf{Fem self-underrating:} \textcolor{HopBlue}{\textbf{$\downarrow$ 0.12 \sym{*}}} in EM, \textcolor{HopBlue}{\textbf{$\downarrow$ 0.16 \sym{**}}} in Thinking
-\item[$\Rightarrow$] \textbf{FF premium:} \textcolor{HopBlue}{\textbf{$\uparrow$ 0.12--0.27\sym{***} SD}}
-\end{itemize}
-\vfill
-\scriptsize
-\hyperlink{slide:rob_fa}{\beamergotobutton{FA tables}}
-\end{frame}
-% ---- 33: Robustness 3 - BESSI ----
-\begin{frame}{3. BESSI Survey}
-\centering
-\includegraphics[width=0.70\textwidth]{figures/BESSI_self_peer_combined.png}
-\vspace{0.2cm}
-\footnotesize
-\begin{itemize}
-\item[$\Rightarrow$] \textbf{Fem self-underrating:} significant in 4/5 domains, largest in \textcolor{HopBlue}{\textbf{EM $\downarrow$ 0.47\sym{***} SD}}
-\item[$\Rightarrow$] \textbf{FF premium:} \textcolor{HopBlue}{\textbf{$\uparrow$ 0.26--0.36\sym{***} SD}} across all domains
-\end{itemize}
-\vfill
-\scriptsize
-\hyperlink{slide:rob_bessi}{\beamergotobutton{BESSI tables}}
-\end{frame}
-% ---- 34: Robustness summary - all 4 ----
+% ---- 31: Robustness summary - all 4 ----
 \begin{frame}{Robustness: Key Takeaways}
 \centering
 \setlength{\fboxsep}{0.5pt}
@@ -1245,22 +1206,67 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \hyperlink{slide:ff_premium}{\beamerreturnbutton{Back}}
 \end{frame}
 % ---- EO Robustness ----
-\begin{frame}{Robustness: EO Score}
+\begin{frame}{Robustness: External Observer Score}
 \label{slide:rob_eo}
+\begin{columns}[T]
+\begin{column}{0.35\textwidth}
+\footnotesize
+\vspace{0.3cm}
+\begin{itemize}
+  \setlength{\itemsep}{4pt}
+  \item \textbf{Fem self-underrating:} negative across all domains, not significant (smaller $N$)
+  \item \textbf{FF premium:} \textcolor{HopBlue}{\textbf{+0.20--0.40\sym{***} SD}}
+\end{itemize}
+\vfill
+\hyperlink{slide:robustness}{\beamerreturnbutton{Back}}
+\end{column}
+\begin{column}{0.63\textwidth}
 \centering
-\includegraphics[width=0.75\textwidth]{figures/PB_self_peer_EO_combined.png}
+\includegraphics[width=\textwidth]{figures/PB_self_peer_EO_combined.png}
+\end{column}
+\end{columns}
 \end{frame}
 % ---- FA Robustness ----
-\begin{frame}{Robustness: Lab-in-the-Field}
+\begin{frame}{Robustness: Lab-in-the-Field (FA)}
 \label{slide:rob_fa}
+\begin{columns}[T]
+\begin{column}{0.35\textwidth}
+\footnotesize
+\vspace{0.3cm}
+\begin{itemize}
+  \setlength{\itemsep}{4pt}
+  \item \textbf{Fem self-underrating:} \textcolor{HopBlue}{\textbf{$\downarrow$ 0.12\sym{*}}} in EM, \textcolor{HopBlue}{\textbf{$\downarrow$ 0.16\sym{**}}} in Thinking
+  \item \textbf{FF premium:} \textcolor{HopBlue}{\textbf{+0.12--0.27\sym{***} SD}}
+\end{itemize}
+\vfill
+\hyperlink{slide:robustness}{\beamerreturnbutton{Back}}
+\end{column}
+\begin{column}{0.63\textwidth}
 \centering
-\includegraphics[width=0.75\textwidth]{figures/PB_self_peer_FA_combined.png}
+\includegraphics[width=\textwidth]{figures/PB_self_peer_FA_combined.png}
+\end{column}
+\end{columns}
 \end{frame}
 % ---- BESSI Robustness ----
-\begin{frame}{Robustness: BESSI}
+\begin{frame}{Robustness: BESSI Survey}
 \label{slide:rob_bessi}
+\begin{columns}[T]
+\begin{column}{0.35\textwidth}
+\footnotesize
+\vspace{0.3cm}
+\begin{itemize}
+  \setlength{\itemsep}{4pt}
+  \item \textbf{Fem self-underrating:} significant in 4/5 domains, largest in \textcolor{HopBlue}{\textbf{EM $\downarrow$ 0.47\sym{***} SD}}
+  \item \textbf{FF premium:} \textcolor{HopBlue}{\textbf{+0.26--0.36\sym{***} SD}} across all domains
+\end{itemize}
+\vfill
+\hyperlink{slide:robustness}{\beamerreturnbutton{Back}}
+\end{column}
+\begin{column}{0.63\textwidth}
 \centering
-\includegraphics[width=0.75\textwidth]{figures/BESSI_self_peer_combined.png}
+\includegraphics[width=\textwidth]{figures/BESSI_self_peer_combined.png}
+\end{column}
+\end{columns}
 \end{frame}
 % ---- Friendship Mediation (NEW since submitted version) ----
 \begin{frame}{Friendship Mediation}
