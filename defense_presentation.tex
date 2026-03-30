@@ -281,7 +281,7 @@ Measurement, Gender Dynamics, and Social Identity}
 \vspace{0.2cm}
 \textbf{Analysis sample}
 \begin{itemize}
-\item 39 schools, 80 grades, 148 classrooms, 2,165 students with baseline + endline data
+\item 39 schools, 80 grades, 148 classrooms, 2,164 students with baseline + endline data
 \end{itemize}
 \vspace{0.2cm}
 \textbf{Randomization and Intervention}
@@ -391,14 +391,23 @@ Measurement, Gender Dynamics, and Social Identity}
 \begin{frame}{Standardized behavioral task (Final Activity)}
 \footnotesize
 \begin{wrapfigure}{r}{0.35\textwidth}
+<<<<<<< Updated upstream
 
+=======
+\vspace{-0.5cm}
+>>>>>>> Stashed changes
 \centering
 \includegraphics[width=0.85\linewidth]{figures/marshmallowI.png}
 \vspace{0.2cm}
 \includegraphics[width=0.85\linewidth]{figures/marshmallowII.png}
+<<<<<<< Updated upstream
 
 \end{wrapfigure}
 \vspace{0.1cm}
+=======
+\vspace{-0.5cm}
+\end{wrapfigure}
+>>>>>>> Stashed changes
 \textbf{One-hour group task} conducted outside normal class hours (May--June 2023)
 \vspace{0.2cm}
 \begin{itemize}
@@ -438,7 +447,7 @@ y_{igst} = \alpha + \beta T_{igs} + \gamma y_{igs0}
 % ---- Sample characteristics ----
 \begin{frame}{Sample characteristics}\label{slide:sample}
 \small
-\textbf{39 schools, 80 grades, 148 classrooms, 2,165 students} \\
+\textbf{39 schools, 80 grades, 148 classrooms, 2,164 students} \\
 \vspace{0.3cm}
 \textcolor{HopBlue}{\textbf{Students}}
 \begin{itemize}
@@ -814,6 +823,7 @@ y_{ijgs} &=& \alpha
 \begin{itemize}
     \item \hlcoef{$\bm{\beta_7}$}: \textbf{Treatment effect} on the female-female premium (key parameter)
     \item \textbf{Background controls}: Birthplace, caregivers' birthplace, and caregivers' education levels.
+<<<<<<< Updated upstream
 \end{itemize}
 \vspace{0.3cm}
 \fadecolor{2}{\textcolor<2>{HopBlue}{\textbf{Nationality}}}
@@ -827,6 +837,15 @@ y_{ijgs} &=& \alpha
 \vspace{2.5cm}
 {\Large \textbf{1. Gender In-Group}}\\
 {\color{HopBlue}\rule{0.5\linewidth}{2pt}}
+=======
+\end{itemize}
+\vspace{0.3cm}
+\fadecolor{2}{\textcolor<2>{HopBlue}{\textbf{Nationality}}}
+\begin{itemize}
+    \item \fadecolor{2}{Same specification, replacing StuFem/PeerFem with \textbf{StuSpanish/PeerSpanish}}
+    \item \fadecolor{2}{\textbf{Background controls}: Gender, caregivers' birthplace, and caregivers' education levels.}
+\end{itemize}
+>>>>>>> Stashed changes
 \end{frame}
 % ---- 39: Gender In-Group (Lab Task) ----
 \begin{frame}{Gender In-Group: Lab Task (FA)}
@@ -1353,7 +1372,11 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
   \item FA: random groups break the friendship channel; BL friendship has no predictive power
   \item The remaining $\sim$80\% reflects in-group evaluation patterns, not pre-existing relationships
 \end{itemize}
+<<<<<<< Updated upstream
  \hyperlink{slide:ch2takeaway}  {\beamerreturnbutton{Back}}
+=======
+ \hyperlink{slide:ch2takeaway}{\beamerreturnbutton{Back}}
+>>>>>>> Stashed changes
 \end{frame}
 
 % ---- Friendship Coefplot (NEW since submitted version) ----
@@ -1366,10 +1389,17 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \begin{itemize}
   \setlength{\itemsep}{2pt}
   \item $\beta_1 \approx 0$: male peers rate female and male students the same (gender-neutral)
+<<<<<<< Updated upstream
   \item $\beta_1 + \beta_3$ barely shifts with friendship control (10--20\% mediated) 
 \end{itemize}
 \vfill
  \hyperlink{slide:ch2takeaway}  {\beamerreturnbutton{Back}}
+=======
+  \item $\beta_1 + \beta_3$ barely shifts with friendship control (10--20\% mediated)
+\end{itemize}
+\vfill
+ \hyperlink{slide:ch2takeaway}{\beamerreturnbutton{Back}}
+>>>>>>> Stashed changes
 \end{frame}
 % ---- Self-Evaluation Deviations: Self - Peer ----
 \begin{frame}{Self-Evaluation Deviations: Self $-$ Peer}
@@ -1391,7 +1421,7 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \begin{flushleft}
 \hyperlink{slide:selfeval_tch}{\beamergotobutton{Self $-$ Teacher}}
 \hyperlink{slide:selfeval_eo}{\beamergotobutton{Self $-$ EO}} \hfill
- \hyperlink{slide:ch2takeaway}  {\beamerreturnbutton{Back}}
+ \hyperlink{slide:ch2takeaway}{\beamerreturnbutton{Back}}
 \end{flushleft}
 \end{frame}
 % ---- Self-Evaluation Deviations: Self - Teacher ----
@@ -1432,7 +1462,68 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \hfill
 \hyperlink{slide:selfeval_tch}{\beamergotobutton{Self $-$ Teacher}}
 \end{frame}
+<<<<<<< Updated upstream
 
+=======
+% ---- Sample Attrition Funnel ----
+\begin{frame}{Sample Attrition Funnel}
+\label{slide:attrition}
+\scriptsize
+\begin{center}
+\begin{tabular}{clc}
+\toprule
+Stage & What happens & Approx.\ $N$ \\
+\midrule
+0 & Randomized universe (88 school-grade clusters) & 4,763 \\
+1 & Non-research removal, out-of-research grades & $\sim$3,648 \\
+2 & Parental consent ($\sim$66\%) & $\sim$2,680 \\
+3 & Surveyed classrooms (148 of 195, budget constraint) & $\sim$2,450 \\
+4 & Post-randomization attrition (5 classrooms) & $\sim$2,364 \\
+5 & \textbf{With baseline + endline survey data} & \textbf{2,164} \\
+\midrule
+6a & Ch.1 analysis (outcome-specific) & 1,092--1,892 \\
+6b & Ch.2 (CO, T only by design) & $\sim$1,100 \\
+6c & Ch.3 (FA/BESSI, T + C) & $\sim$2,100 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.2cm}
+\footnotesize
+\begin{itemize}
+\item Largest drop is consent ($\sim$34\%), standard for school-based RCTs in Spain
+\item 2,680 $\rightarrow$ 2,450 is survey logistics, not attrition (survey company budget)
+\item Ch.2 $N \approx$1,100 is smaller \emph{by design}: Pentabilities peer assessments only in treated classrooms
+\end{itemize}
+\end{frame}
+% ---- Stratification and Randomization ----
+\begin{frame}{Stratification and Randomization}
+\label{slide:stratification}
+\scriptsize
+\textbf{Stratification variable:} School disadvantage level (4 categories, Catalan education authority administrative composite index)
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{llccc}
+\toprule
+\textbf{Complexity} & \textbf{Schools} & \textbf{Control} & \textbf{Treatment} & \textbf{Total grades} \\
+\midrule
+Low-Mid (Mitjana baixa)  & 12 & 12 & 14 & 26 \\
+High-Mid (Mitjana alta)  & 11 & 11 & 11 & 22 \\
+High (Alta)              & 13 & 14 & 15 & 29 \\
+Very High (Molt alta)    &  4 &  4 &  4 &  8 \\
+\midrule
+\textbf{Total}           & \textbf{40} & \textbf{41} & \textbf{44} & \textbf{85} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Randomization at the \textbf{grade-within-school} level, stratified by school disadvantage
+    \item Every stratum contains both treatment and control grades
+    \item Distribution reflects recruitment targeting disadvantaged populations
+    \item School FE absorb strata FE (disadvantage category is school-level)
+\end{itemize}
+\end{frame}
+>>>>>>> Stashed changes
 % ---- Balance Tables ----
 \begin{frame}{Balance Tables}
 \label{slide:balance}
