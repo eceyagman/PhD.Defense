@@ -291,6 +291,7 @@ Measurement, Gender Dynamics, and Social Identity}
 \item \textbf{Control}: Business as usual
 \end{itemize}
 \hyperlink{complexity}{\beamergotobutton{Complexity}} \hyperlink{randomization}{\beamergotobutton{Randomization}}
+\hyperlink{slide:stratification}{\beamergotobutton{Stratification}}
 \end{frame}
 % ---- 10: Three chapters at a glance ----
 \begin{frame}{Three chapters at a glance}
@@ -342,11 +343,11 @@ Measurement, Gender Dynamics, and Social Identity}
 \begin{frame}<0>[label=thesismap]{Roadmap}
 \vspace{0.5cm}
 \begin{enumerate}
-    \item \fadecolor{1}{\textbf{Ch.\ 1:} Does the pedagogy change classroom practices and student outcomes?}
+    \item \fadecolor{1}{\textbf{Ch.\ 1:} Does the pedagogy change classroom practices and student outcomes? (T+C)}
     \vspace{0.4cm}
-    \item \fadecolor{2}{\textbf{Ch.\ 2:} Do systematic gender patterns emerge in self- and peer-evaluations?}
+    \item \fadecolor{2}{\textbf{Ch.\ 2:} Do systematic gender patterns emerge in self- and peer-evaluations? (Treatment only)}
     \vspace{0.4cm}
-    \item \fadecolor{3}{\textbf{Ch.\ 3:} Can the program reduce identity-based evaluative gaps?}
+    \item \fadecolor{3}{\textbf{Ch.\ 3:} Can the SEL program reduce in-group favoritism in peer evaluations? (T+C)}
 \end{enumerate}
 \end{frame}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -389,34 +390,32 @@ Measurement, Gender Dynamics, and Social Identity}
 % ---- Standardized Activity (FA) ----
 \begin{frame}{Standardized behavioral task (Final Activity)}
 \footnotesize
-\begin{columns}[T]
-\begin{column}{0.55\textwidth}
+\begin{wrapfigure}{r}{0.35\textwidth}
+
+\centering
+\includegraphics[width=0.85\linewidth]{figures/marshmallowI.png}
+\vspace{0.2cm}
+\includegraphics[width=0.85\linewidth]{figures/marshmallowII.png}
+
+\end{wrapfigure}
+\vspace{0.1cm}
 \textbf{One-hour group task} conducted outside normal class hours (May--June 2023)
 \vspace{0.2cm}
 \begin{itemize}
   \setlength{\itemsep}{4pt}
   \item Build a marshmallow tower in randomly assigned groups of 3--5
   \item Designed to elicit socioemotional behaviors in a controlled, low-stakes setting
-  \item After the task
-  360\textsuperscript{o} ratings on 10 behaviors (self, peer, EO) using the same rubric as classroom observations
+  \item After the task: 360\textsuperscript{o} ratings on 10 behaviors (self, peer, EO) using the same rubric as classroom observations
 \end{itemize}
 \vspace{0.3cm}
 \textcolor{HopBlue}{\textbf{Why it matters:}}
 \begin{itemize}
-  \item Random groups $\rightarrow$ eliminates friendship confound
-  \item T + C students $\rightarrow$ enables causal comparisons
+\item T + C students $\rightarrow$ enables causal comparisons
+  \item Random groups $\rightarrow$ eliminates friendship confound 
   \item Behavior-anchored $\rightarrow$ complements survey-based BESSI
 \end{itemize}
-\end{column}
-\begin{column}{0.35\textwidth}
-\vspace{0.2cm}
-\centering
-\includegraphics[width=0.85\textwidth]{figures/marshmallowI.png}
-\vspace{0.2cm}
-\includegraphics[width=0.85\textwidth]{figures/marshmallowII.png}
-\end{column}
-\end{columns}
 \end{frame}
+
 % ---- 14: Econometric specification ----
 \begin{frame}{Econometric specification}
 \small
@@ -771,13 +770,13 @@ y_{ijs} &= \alpha
 \textbf{Two questions:}
 \begin{enumerate}
     \item Do adolescents display own-group favoritism in peer assessments of SES? (Gender + Nationality)
-    \item Can an SEL program attenuate these in-group biases?
+    \item Can the SEL program attenuate this in-group favoritism?
 \end{enumerate}
 \vspace{0.3cm}
-\textbf{Design advantage over Chapter 2:}
+\textbf{Chapter 3 Study Design:}
 \begin{itemize}
-    \item Full treatment/control comparison (randomized rollout)
-    \item Two complementary instruments:
+    \item Full treatment/control comparison
+    \item Two complementary instruments for peer-evaluations:
     \begin{itemize}
         \item \textbf{FA (lab-in-the-field):} task-based, random groups, behavior-grounded ratings
         \item \textbf{BESSI (survey):} reputation-based, broader perceived capacity
@@ -787,8 +786,9 @@ y_{ijs} &= \alpha
 \textit{Comparing both reveals what changes first}
 \end{frame}
 % ---- 38: Empirical Strategy ----
-\begin{frame}{Empirical Strategy: Triple Interaction}
+\begin{frame}<1-2>{Empirical Strategy: Triple Interaction}
 \small
+\textcolor{HopBlue}{\textbf{Gender}}
 \begin{eqnarray}
 y_{ijgs} &=& \alpha
 + \beta_1\,\text{StuFem}
@@ -804,23 +804,32 @@ y_{ijgs} &=& \alpha
 + \bm{\beta_7}\,(\mathbf{StuFem \times PeerFem \times Treated})
 \nonumber \\
 &&
-+ \text{360$^{\circ}$ score controls}
-+ \text{Background controls}
-+ \text{School\_FE}
-+ \varepsilon
++ \textit{360$^{\circ}$ score controls}
++ \textit{background controls}
++ \mu_{\text{school}}
++ \varepsilon_{ijgs}
 \nonumber
 \end{eqnarray}
-\vspace{0.2cm}
+
 \begin{itemize}
-    \item \hlcoef{$\beta_3$}: in-group premium in \textbf{control} classrooms
-    \item \hlcoef{$\beta_7$}: \textbf{treatment effect} on the in-group premium (key parameter)
-    \item SE clustered at school-grade (randomization) level
+    \item \hlcoef{$\bm{\beta_7}$}: \textbf{Treatment effect} on the female-female premium (key parameter)
+    \item \textbf{Background controls}: Birthplace, caregivers' birthplace, and caregivers' education levels.
 \end{itemize}
-\vspace{0.2cm}
-Same framework for nationality: replace gender indicators with born-in-Spain indicators
+\vspace{0.3cm}
+\fadecolor{2}{\textcolor<2>{HopBlue}{\textbf{Nationality}}}
+\begin{itemize}
+    \item \fadecolor{2}{Same specification, replacing StuFem/PeerFem with \textbf{StuSpanish/PeerSpanish}}
+    \item \fadecolor{2}{\textbf{Background controls}: Gender, caregivers' birthplace, and caregivers' education levels.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[plain]
+\vspace{2.5cm}
+{\Large \textbf{1. Gender In-Group}}\\
+{\color{HopBlue}\rule{0.5\linewidth}{2pt}}
 \end{frame}
 % ---- 39: Gender In-Group (Lab Task) ----
-\begin{frame}{Gender In-Group Bias: Lab Task (FA)}
+\begin{frame}{Gender In-Group: Lab Task (FA)}
 \small
 \textbf{In control classrooms:} FF premium replicates: +0.22 to +0.35 SD across all 5 domains (all significant)
 \vspace{0.2cm}
@@ -844,7 +853,7 @@ Thinking & $+$0.25\sym{***} & $-$0.04 \\
 \textit{Treatment compresses the FF premium, significantly in Cooperation ($\sim$1/5 SD reduction)}
 \end{frame}
 % ---- 40: Gender In-Group (BESSI) ----
-\begin{frame}{Gender In-Group Bias: BESSI Survey}
+\begin{frame}{Gender In-Group: BESSI Survey}
 \small
 \textbf{In control classrooms:}
 \begin{itemize}
@@ -859,8 +868,14 @@ Thinking & $+$0.25\sym{***} & $-$0.04 \\
 \vspace{0.5cm}
 \textit{Same direction as FA but less precise: reputation-based beliefs are stickier than task-based ratings}
 \end{frame}
+
+\begin{frame}[plain]
+\vspace{2.5cm}
+{\Large \textbf{2. Nationality In-Group}}\\
+{\color{HopBlue}\rule{0.6\linewidth}{2pt}}
+\end{frame}
 % ---- 41: Nationality ----
-\begin{frame}{Nationality In-Group Bias}
+\begin{frame}{Nationality In-Group}
 \small
 \textbf{National origin (Spain-born vs.\ foreign-born):}
 \vspace{0.3cm}
@@ -1089,6 +1104,39 @@ These evaluations carry systematic patterns tied to gender and social identity, 
     \centering \includegraphics[width=\textwidth]{figures/randomization.png}
 \end{figure}
 \end{frame}
+
+% ---- Stratification  ----
+\begin{frame}{Stratification}
+\label{slide:stratification}
+\scriptsize
+\textbf{Stratification variable:} School disadvantage level (4 categories, Catalan education authority administrative composite index)
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{llccc}
+\toprule
+\textbf{Complexity} & \textbf{Schools} & \textbf{Control} & \textbf{Treatment} & \textbf{Total grades} \\
+\midrule
+Low-Mid (Mitjana baixa)  & 12 & 12 & 14 & 26 \\
+High-Mid (Mitjana alta)  & 11 & 11 & 11 & 22 \\
+High (Alta)              & 13 & 14 & 15 & 29 \\
+Very High (Molt alta)    &  4 &  4 &  4 &  8 \\
+\midrule
+\textbf{Total}           & \textbf{40} & \textbf{41} & \textbf{44} & \textbf{85} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Randomization at the \textbf{grade-within-school} level, stratified by school disadvantage
+    \item Every stratum contains both treatment and control grades
+    \item Distribution reflects recruitment targeting disadvantaged populations
+    \item School FE absorb strata FE (disadvantage category is school-level)
+\end{itemize}
+\vspace{0.3cm}
+\hyperlink{slide:design}{\beamerreturnbutton{Back}}
+\end{frame}
+
+
 \begin{frame}{Standardized Activity}
 \label{standard_activity}
 \begin{minipage}{0.5\textwidth}
@@ -1155,6 +1203,41 @@ These evaluations carry systematic patterns tied to gender and social identity, 
 \vfill
 \hyperlink{slide:perception}{\beamerreturnbutton{Back}}
 \end{frame}
+
+% ---- Sample Attrition Funnel ----
+\begin{frame}{Sample Attrition Funnel}
+\label{slide:attrition}
+\scriptsize
+\begin{center}
+\begin{tabular}{clc}
+\toprule
+Stage & What happens & Approx.\ $N$ \\
+\midrule
+0 & Randomized universe (88 school-grade clusters) & 4,763 \\
+1 & Non-research removal, out-of-research grades & $\sim$3,648 \\
+2 & Parental consent ($\sim$66\%) & $\sim$2,680 \\
+3 & Surveyed classrooms (148 of 195, budget constraint) & $\sim$2,450 \\
+4 & Post-randomization attrition (5 classrooms) & $\sim$2,364 \\
+5 & \textbf{With baseline + endline survey data} & \textbf{2,165} \\
+\midrule
+6a & Ch.1 analysis (outcome-specific) & 1,092--1,892 \\
+6b & Ch.2 (CO, T only by design) & $\sim$1,100 \\
+6c & Ch.3 (FA/BESSI, T + C) & $\sim$2,100 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.2cm}
+\footnotesize
+\begin{itemize}
+\item Largest drop is consent ($\sim$34\%), standard for school-based RCTs in Spain
+\item 2,680 $\rightarrow$ 2,450 is survey logistics, not attrition (survey company budget)
+\item Ch.2 $N \approx$1,100 is smaller \emph{by design}: Pentabilities peer assessments only in treated classrooms
+\end{itemize}
+\vspace{0.2cm}
+\hyperlink{slide:sample}{\beamerreturnbutton{Back}}
+\end{frame}
+
+
 \begin{frame}{Descriptives}
 \label{descriptives}
 \hyperlink{slide:sample}{\beamerreturnbutton{Back}}
@@ -1257,6 +1340,7 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \end{column}
 \end{columns}
 \end{frame}
+
 % ---- Friendship Mediation (NEW since submitted version) ----
 \begin{frame}{Friendship Mediation}
 \label{slide:friendship}
@@ -1269,26 +1353,27 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
   \item FA: random groups break the friendship channel; BL friendship has no predictive power
   \item The remaining $\sim$80\% reflects in-group evaluation patterns, not pre-existing relationships
 \end{itemize}
+ \hyperlink{slide:ch2takeaway}  {\beamerreturnbutton{Back}}
 \end{frame}
+
 % ---- Friendship Coefplot (NEW since submitted version) ----
 \begin{frame}{Friendship \& Male Neutrality}
 \label{slide:friendship_coef}
-\centering
+
 \includegraphics[width=0.70\textwidth]{figures/defense_friendship_coefplot.png}
 \vspace{0.1cm}
 \scriptsize
 \begin{itemize}
   \setlength{\itemsep}{2pt}
   \item $\beta_1 \approx 0$: male peers rate female and male students the same (gender-neutral)
-  \item $\beta_1 + \beta_3$ barely shifts with friendship control (10--20\% mediated)
-  \item \textbf{What about M-M?} M-M is the reference group ($\alpha$). $\beta_1 \approx 0$ means male peers do not differentiate by student gender, consistent with no M-M in-group premium. However, M-M is absorbed into the intercept: this parameterization isolates the FF interaction ($\beta_3$), not same-gender effects symmetrically.
+  \item $\beta_1 + \beta_3$ barely shifts with friendship control (10--20\% mediated) 
 \end{itemize}
 \vfill
-\hyperlink{slide:friendship}{\beamerreturnbutton{Summary Table}}
+ \hyperlink{slide:ch2takeaway}  {\beamerreturnbutton{Back}}
 \end{frame}
 % ---- Self-Evaluation Deviations: Self - Peer ----
 \begin{frame}{Self-Evaluation Deviations: Self $-$ Peer}
-\label{slide:selfeval_dev}\vspace{-0.2cm}
+\label{slide:selfeval_dev}
 \centering
 \begin{tabular}{cc}
   \includegraphics[width=0.33\textwidth]{figures/co_selfpeer_dev_gender.png} &
@@ -1300,7 +1385,7 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \begin{itemize}
   \setlength{\itemsep}{1pt}
   \item \textbf{Classroom Obs:} Males overestimate (+0.26 to +0.38 above peer ratings), females approximately calibrated
-  \item \textbf{FA and BESSI:} Genuine female underestimation, especially in Emotional Management
+  \item \textbf{FA and BESSI:} Genuine female underestimation, especially in EM
 \end{itemize}
 \vfill
 \begin{flushleft}
@@ -1347,64 +1432,7 @@ y = \alpha + \beta_1\, \text{StuFem} + \beta_2\, \text{PeerFem} + \beta_3\, (\te
 \hfill
 \hyperlink{slide:selfeval_tch}{\beamergotobutton{Self $-$ Teacher}}
 \end{frame}
-% ---- Sample Attrition Funnel ----
-\begin{frame}{Sample Attrition Funnel}
-\label{slide:attrition}
-\scriptsize
-\begin{center}
-\begin{tabular}{clc}
-\toprule
-Stage & What happens & Approx.\ $N$ \\
-\midrule
-0 & Randomized universe (88 school-grade clusters) & 4,763 \\
-1 & Non-research removal, out-of-research grades & $\sim$3,648 \\
-2 & Parental consent ($\sim$66\%) & $\sim$2,680 \\
-3 & Surveyed classrooms (148 of 195, budget constraint) & $\sim$2,450 \\
-4 & Post-randomization attrition (5 classrooms) & $\sim$2,364 \\
-5 & \textbf{With baseline + endline survey data} & \textbf{2,165} \\
-\midrule
-6a & Ch.1 analysis (outcome-specific) & 1,092--1,892 \\
-6b & Ch.2 (CO, T only by design) & $\sim$1,100 \\
-6c & Ch.3 (FA/BESSI, T + C) & $\sim$2,100 \\
-\bottomrule
-\end{tabular}
-\end{center}
-\vspace{0.2cm}
-\footnotesize
-\begin{itemize}
-\item Largest drop is consent ($\sim$34\%), standard for school-based RCTs in Spain
-\item 2,680 $\rightarrow$ 2,450 is survey logistics, not attrition (survey company budget)
-\item Ch.2 $N \approx$1,100 is smaller \emph{by design}: Pentabilities peer assessments only in treated classrooms
-\end{itemize}
-\end{frame}
-% ---- Stratification and Randomization ----
-\begin{frame}{Stratification and Randomization}
-\label{slide:stratification}
-\scriptsize
-\textbf{Stratification variable:} School disadvantage level (4 categories, Catalan education authority administrative composite index)
-\vspace{0.3cm}
-\begin{center}
-\begin{tabular}{llccc}
-\toprule
-\textbf{Complexity} & \textbf{Schools} & \textbf{Control} & \textbf{Treatment} & \textbf{Total grades} \\
-\midrule
-Low-Mid (Mitjana baixa)  & 12 & 12 & 14 & 26 \\
-High-Mid (Mitjana alta)  & 11 & 11 & 11 & 22 \\
-High (Alta)              & 13 & 14 & 15 & 29 \\
-Very High (Molt alta)    &  4 &  4 &  4 &  8 \\
-\midrule
-\textbf{Total}           & \textbf{40} & \textbf{41} & \textbf{44} & \textbf{85} \\
-\bottomrule
-\end{tabular}
-\end{center}
-\vspace{0.3cm}
-\begin{itemize}
-    \item Randomization at the \textbf{grade-within-school} level, stratified by school disadvantage
-    \item Every stratum contains both treatment and control grades
-    \item Distribution reflects recruitment targeting disadvantaged populations
-    \item School FE absorb strata FE (disadvantage category is school-level)
-\end{itemize}
-\end{frame}
+
 % ---- Balance Tables ----
 \begin{frame}{Balance Tables}
 \label{slide:balance}
