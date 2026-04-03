@@ -196,7 +196,7 @@ Measurement, Gender Dynamics, and Social Identity}
 \begin{enumerate}
   \item \textbf{Observable behaviors} reflect underlying socioemotional skills \citep{Heckman2012-nt, Jackson2018-ho}
     \begin{itemize}
-      \item (e.g., \textit{``remains calm under pressure''} $\rightarrow$ Emotional Management)
+      \item e.g., \textit{``remains calm under pressure''} $\rightarrow$ Emotional Management
       \item 35 target behaviors across 5 domains 
     \end{itemize}
   \item \fadecolor{2}{\textbf{Evidence-based feedback} guides SEL development (\textit{``formative assessment''})}
@@ -281,7 +281,7 @@ Measurement, Gender Dynamics, and Social Identity}
 \textbf{Sample frame}
 \begin{itemize}
 \item 40 secondary schools
-\item Recruitment: public channels, voluntary, targeted schools serving underprivileged students
+\item Recruitment: voluntary, targeted  disadvantaged schools    
 \end{itemize}
 \vspace{0.2cm}
 \textbf{Randomization and Intervention}
@@ -372,7 +372,7 @@ Measurement, Gender Dynamics, and Social Identity}
 \vspace{0.2cm}
 \textbf{Question:} Does embedding SEL into daily instruction reshape what happens in the classroom and improve student outcomes? \\
 \vspace{0.3cm}
-\textbf{Timeline}
+\textbf{Study Timeline}
 \begin{itemize}
     \item Teacher training: December 2022 -- January 2023
     \item Implementation: January -- June 2023 (two academic terms)
@@ -460,7 +460,7 @@ y_{igst} = \alpha + \beta T_{igs} + \gamma y_{igs0}
 \vspace{0.1cm}
 \textcolor{HopBlue}{\textbf{Schools}}
 \begin{itemize}
-\item \textbf{ESO grades:} 42\% 1st, 32\% 2nd, 22\% 3rd, 4\% 4th
+\item \textbf{Grades:} 42\% 1st, 32\% 2nd, 22\% 3rd, 4\% 4th
 \item \textbf{Province:} 88\% Barcelona, 8\% Lleida, 2\% Girona, 2\% Tarragona
 \end{itemize}
 \vspace{0.1cm}
@@ -603,18 +603,18 @@ Is there a systematic gender pattern in how peers evaluate each other's SES? \\
 \begin{frame}{Adolescence as a formative period}
 \small
 \begin{itemize}
-    \item Ages 12--16: high neuroplasticity, self-beliefs and aspirations are particularly malleable \citep{Steinberg2014-pe}
+    \item Ages 12--16: high neuroplasticity, self-perception and aspirations are particularly malleable \citep{Steinberg2014-pe}
     \item \textbf{Self-identity formation:} Who am I? What am I good at? Where do I fit in?
     \item \textbf{Peer-influence peaks:} Students look to classmates for cues; who is good at what?
     \item Gendered norms around ``girls do well'' vs.\ ``boys do well'' solidify during these years
 \end{itemize}
 \vspace{0.5cm}
-\textit{Early differences in self-beliefs or peer recognition can shape confidence and aspirations for years to come}
+\textit{Early differences in self-perceptions or peer recognition can shape confidence and aspirations for years to come}
 \end{frame}
 % ---- 26: Empirical Strategy ----
 \begin{frame}{Empirical Strategy}
 \footnotesize
-\textcolor{HopBlue}{\textbf{(I) Self-assigned scores}}
+\textcolor{HopBlue}{\textbf{(I) Self-assigned scores (standardized)}}
 \vspace{-0.2cm}
 \begin{equation*}
 y_{is} = \alpha + \bm{\beta_1} \mathbf{StuFem}_i + \beta_2 \, \text{Teacher}_{is} + \beta_3 \, \text{Peer}_{is} + \beta_4 \mathbf{X}'_{is} + \gamma + \varepsilon_{is}
@@ -628,7 +628,7 @@ y_{is} = \alpha + \bm{\beta_1} \mathbf{StuFem}_i + \beta_2 \, \text{Teacher}_{is
 \item $\bm{\beta_1}$: \textit{How different do girls rate themselves from boys, given that teachers and peers see them as equally skilled?}
 \end{itemize}
 \vspace{0.2cm}
-\alt<2->{\textcolor{HopBlue}{\textbf{(II) Peer-assigned scores}}}{\textcolor{fadegray}{\textbf{(II) Peer-assigned scores}}}
+\alt<2->{\textcolor{HopBlue}{\textbf{(II) Peer-assigned scores (standardized)}}}{\textcolor{fadegray}{\textbf{(II) Peer-assigned scores}}}
 \vspace{-0.2cm}
 \alt<2->{%
 \begin{align*}
@@ -714,7 +714,7 @@ y_{ijs} &= \alpha
 \vspace{0.4cm}
 \begin{enumerate}
   \setlength{\itemsep}{12pt}
-  \item \textcolor{HopBlue}{\textbf{External Observer (EO) score:}} Replace teacher/peer score controls with independent observer ratings (in-classroom)
+  \item \textcolor{HopBlue}{\textbf{External Observer (EO) score:}} Replace teacher score controls with independent observer ratings (in-classroom)
  \hyperlink{slide:rob_eo}{\beamergotobutton{EO}}
   \item \textcolor{HopBlue}{\textbf{Lab-in-the-field activity (FA):}} Standardized task, randomly assigned groups, controlled setting outside the classroom
  \hyperlink{slide:rob_fa}{\beamergotobutton{FA}}
@@ -752,12 +752,7 @@ y_{ijs} &= \alpha
     \item \textbf{Female peers rate other girls higher.} A strong FF premium in every domain. Male peers show no gender pattern. \hyperlink{slide:selfeval_dev}{\beamergotobutton{Self-Eval Deviations}}
 \hyperlink{slide:friendship}{\beamergotobutton{Friendship}}
 \end{enumerate}
-\vspace{0.2cm}
-\textbf{Why this matters:}
-\begin{itemize}
-    \item Self-beliefs formed in adolescence shape confidence, aspirations, and educational choices
-    \item The labor market rewards self-promotion: gendered patterns that start here can compound into career sorting and wage gaps
-\end{itemize}
+
 \vspace{0.2cm}
 \textit{Can the program, designed for skill-building, reduce in-group favoritism in peer evaluations?}
 \end{frame}
@@ -808,7 +803,7 @@ y_{ijs} &= \alpha
 y_{ijgs} &=& \textcolor{fadegray}{\alpha
 + \beta_1\,\text{StuFem}
 + \beta_2\,\text{PeerFem}}
-+ \bm{\beta_3}\,(\mathbf{StuFem \times PeerFem})
++ \textcolor{HopBlue}{\bm{\beta_3}}\,(\mathbf{StuFem \times PeerFem})
 \nonumber \\
 &&
 \textcolor{fadegray}{+ \beta_4\,\text{Treated}
@@ -827,7 +822,7 @@ y_{ijgs} &=& \textcolor{fadegray}{\alpha
 \end{eqnarray}}
 
 \begin{itemize}
-	\item \hlcoef{$\bm{\beta_3}$}: In-group premium in the \textbf{control group}
+    \item \hlcoef{$\bm{\beta_3}$}: In-group premium in the \textbf{control group}
     \item \hlcoef{$\bm{\beta_7}$}:  \textbf{Treatment effect} on the in-group premium
     \item \textbf{Background controls}: Birthplace, caregivers' birthplace, and caregivers' education levels.
 \end{itemize}
@@ -842,9 +837,8 @@ y_{ijgs} &=& \textcolor{fadegray}{\alpha
 \begin{frame}[plain]
 \vspace{2.5cm}
 {\Large \textbf{1. Gender In-Group}}\\
-{\color{HopBlue}\rule{0.6\linewidth}{2pt}}
+{\color{HopBlue}\rule{0.5\linewidth}{2pt}}
 \end{frame}
-
 % ---- 39: Gender In-Group (Lab Task) ----
 \begin{frame}{Task-based: Treatment compresses the in-group premium}
 \small
@@ -1014,11 +1008,11 @@ Thinking & $-$0.06 & $+$0.21 \\
 % ---- 46: Thesis Summary ----
 \begin{frame}{Thesis Summary}
 \footnotesize
-Schools shape not only what students know, but how they see themselves and interact with one another.
+Schools shape not only what students know, but how they see themselves and relate to one another.
 \begin{itemize}
     \item These perceptions carry systematic patterns tied to gender and social identity
     \item They form during adolescence and can compound into educational choices and career sorting
-    \item \textit{This thesis asks:} What happens to the social dynamics of the classroom when schools embed structured SEL into routine instruction?
+    \item \textit{This thesis asks:} What happens when schools embed structured SEL into routine instruction?
 \end{itemize}
 
 \begin{center}
@@ -1027,13 +1021,14 @@ Schools shape not only what students know, but how they see themselves and inter
 \toprule
 \textbf{Ch.} & \textbf{Question} & \textbf{Learning} \\
 \midrule
-\textbf{1} & Does the pedagogy reshape classrooms? & Classroom practices transform; average outcomes null (but significant heterogeneity by student background) \\
-\textbf{2} & Are evaluations gendered? & Girls discount their own skills; female peers recognize them, but the signal is not internalized \\
-\textbf{3} & Can the program reduce in-group favoritism? & Yes, especially in task-based settings and low-diversity classrooms \\
+\textbf{1} & Does the program change classrooms and student outcomes? & Classroom practices transform; average student outcomes null \\
+\textbf{2} & Are the evaluations gender-neutral? & No: girls underrate themselves; female peers rate girls higher \\
+\textbf{3} & Can the program reduce in-group favoritism? & Yes: task-based settings, low-diversity classrooms \\
 \bottomrule
 \end{tabular}}
 \end{center}
 \end{frame}
+
 % ---- 47: Contributions ----
 \begin{frame}<1-3>{Contributions}
 \footnotesize
@@ -1062,7 +1057,7 @@ Schools shape not only what students know, but how they see themselves and inter
 \begin{itemize}
     \item Design individualized feedback sessions that show students where self-ratings diverge from peer and teacher benchmarks
     \item Incorporate classroom discussions that surface and challenge gender norms  \citep{Dhar2022-cn, Matavelli2025-gh}
-    \item Target these efforts in early adolescence, when self-beliefs are malleable and responsive to structured programs \citep{Alan2025-jr}
+    \item Target these efforts in early adolescence, when self-perceptions are malleable and responsive to structured programs \citep{Alan2025-jr}
 \end{itemize}
 \vspace{0.2cm}
 \textbf{2. Embed structured SEL into routine instruction as a lever for both skill-building and social cohesion}
